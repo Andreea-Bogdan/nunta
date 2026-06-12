@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andreea & Bogdan | 17 Octombrie 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#faf9f7;
+    --text:#2c2c2c;
+    --accent:#b89b72;
+    --white:#ffffff;
+    --light:#f2efea;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.7;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+}
+
+h1{
+    font-size:5rem;
+    font-weight:600;
+}
+
+h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+        linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),
+        url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin:20px 0;
+}
+
+.date{
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:14px 32px;
+    background:var(--accent);
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.btn:hover{
+    opacity:.9;
+}
+
+.story{
+    text-align:center;
+}
+
+.story p{
+    max-width:700px;
+    margin:auto;
+}
+
+.countdown{
+    background:var(--white);
+}
+
+.counter{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.box{
+    background:var(--light);
+    padding:25px;
+    min-width:130px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.box span{
+    display:block;
+    font-size:2.2rem;
+    font-weight:600;
+}
+
+.timeline{
+    display:grid;
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+}
+
+.card h3{
+    font-size:2rem;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.rsvp{
+    text-align:center;
+    background:white;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+}
+
+.small{
+    color:#666;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    h2{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="date">17 Octombrie 2026</div>
+
+        <h1>Andreea & Bogdan</h1>
+
+        <p>
+            Cu multă bucurie vă invităm să ne fiți alături
+            într-una dintre cele mai importante zile din viața noastră.
+        </p>
+
+        <a href="#rsvp" class="btn">Confirmă participarea</a>
+
+    </div>
+</section>
+
+<section class="story">
+    <div class="container">
+
+        <h2>Povestea noastră</h2>
+
+        <p>
+            Fiecare poveste de dragoste este frumoasă,
+            însă a noastră este preferata noastră.
+            Suntem recunoscători că vă avem alături și
+            abia așteptăm să sărbătorim împreună această zi specială.
+        </p>
+
+    </div>
+</section>
+
+<section class="countdown">
+    <div class="container">
+
+        <h2 style="text-align:center">Numărătoarea inversă</h2>
+
+        <div class="counter">
+
+            <div class="box">
+                <span id="days">0</span>
+                zile
+            </div>
+
+            <div class="box">
+                <span id="hours">0</span>
+                ore
+            </div>
+
+            <div class="box">
+                <span id="minutes">0</span>
+                minute
+            </div>
+
+            <div class="box">
+                <span id="seconds">0</span>
+                secunde
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 style="text-align:center">Programul zilei</h2>
+
+        <div class="timeline">
+
+            <div class="card">
+                <h3>Ceremonia religioasă</h3>
+                <p><strong>Biserica Sf. Ursula</strong></p>
+                <p>Sibiu</p>
+                <p>Ora: de completat</p>
+            </div>
+
+            <div class="card">
+                <h3>Petrecerea</h3>
+                <p><strong>Versailles Weddings & Events</strong></p>
+                <p>Sibiu</p>
+                <p>Ora: de completat</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 style="text-align:center">Galerie</h2>
+
+        <div class="gallery">
+
+            <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80">
+
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80">
+
+            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=800&q=80">
+
+        </div>
+
+    </div>
+</section>
+
+<section class="rsvp" id="rsvp">
+    <div class="container">
+
+        <h2>Confirmare participare</h2>
+
+        <p>
+            Vă rugăm să confirmați prezența până la data stabilită.
+        </p>
+
+        <a
+            class="btn"
+            href="LINK_FORMULAR_RSVP"
+            target="_blank">
+            Completează formularul
+        </a>
+
+    </div>
+</section>
+
+<footer>
+
+    <h3 style="font-size:2rem">
+        Andreea & Bogdan
+    </h3>
+
+    <p class="small">
+        17 Octombrie 2026
+    </p>
+
+</footer>
+
+<script>
+
+const weddingDate = new Date("October 17, 2026 14:00:00").getTime();
+
+setInterval(() => {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    document.getElementById("days").innerText =
+        Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    document.getElementById("hours").innerText =
+        Math.floor((distance % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60));
+
+    document.getElementById("minutes").innerText =
+        Math.floor((distance % (1000 * 60 * 60))
+        / (1000 * 60));
+
+    document.getElementById("seconds").innerText =
+        Math.floor((distance % (1000 * 60))
+        / 1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
