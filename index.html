@@ -1,326 +1,647 @@
-<!DOCTYPE html><html lang="ro">
+<!DOCTYPE html>
+<html lang="ro">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Andreea & Bogdan | 17 Octombrie 2026</title><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Andreea & Bogdan | 17 Octombrie 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
 
 :root{
-    --gold:#b89b72;
-    --black:#1d1d1d;
-    --cream:#f8f6f2;
-    --white:#ffffff;
+ --gold:#b89b72;
+ --black:#181818;
+ --cream:#f8f6f2;
+ --white:#ffffff;
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+ scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:var(--cream);
-    color:var(--black);
-    line-height:1.8;
-}
-
-section{
-    padding:90px 24px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
+ font-family:'Inter',sans-serif;
+ background:var(--cream);
+ color:var(--black);
+ overflow-x:hidden;
 }
 
 h1,h2,h3{
-    font-family:'Cormorant Garamond',serif;
+ font-family:'Cormorant Garamond',serif;
+ font-weight:500;
 }
 
-h1{
-    font-size:5.5rem;
-    font-weight:500;
-    letter-spacing:2px;
+section{
+ padding:100px 24px;
 }
 
-h2{
-    font-size:3rem;
-    margin-bottom:25px;
-    text-align:center;
+.container{
+ max-width:1100px;
+ margin:auto;
 }
 
 .hero{
-    min-height:100vh;
+ min-height:100vh;
+ position:relative;
 
-    background:
-    linear-gradient(
-    rgba(255,255,255,.78),
-    rgba(255,255,255,.82)
-    ),
-    url("WhatsApp Image 2026-06-16 at 22.57.58.jpeg");
+ background:
+ linear-gradient(
+ rgba(255,255,255,.78),
+ rgba(255,255,255,.82)
+ ),
+ url("WhatsApp Image 2026-06-16 at 22.57.58.jpeg");
 
-    background-size:cover;
-    background-position:center;
+ background-size:cover;
+ background-position:center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
 }
 
 .hero-content{
-    max-width:900px;
-    padding:20px;
+ max-width:850px;
+ position:relative;
+ z-index:2;
+}
+
+.monogram{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ font-family:'Cormorant Garamond',serif;
+ font-size:15rem;
+ opacity:.05;
+ letter-spacing:30px;
+ pointer-events:none;
 }
 
 .date{
-    color:var(--gold);
-    letter-spacing:5px;
-    text-transform:uppercase;
-    font-weight:600;
-    margin-bottom:20px;
+ letter-spacing:6px;
+ text-transform:uppercase;
+ color:var(--gold);
+ margin-bottom:25px;
+ font-weight:600;
 }
 
-.hero p{
-    max-width:720px;
-    margin:30px auto;
-    font-size:1.15rem;
+h1{
+ font-size:6rem;
+ line-height:1;
+ margin-bottom:20px;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 34px;
-    border-radius:40px;
-    background:var(--gold);
-    color:white;
-    text-decoration:none;
-    transition:.3s;
+.hero-text{
+ max-width:700px;
+ margin:auto;
+ font-size:1.15rem;
+ line-height:1.9;
 }
 
-.btn:hover{
-    transform:translateY(-2px);
+.scroll{
+ margin-top:60px;
+ font-size:2rem;
+ color:var(--gold);
+ animation:float 2s infinite;
 }
 
-.story{
-    text-align:center;
+@keyframes float{
+ 0%,100%{
+ transform:translateY(0);
+ }
+
+ 50%{
+ transform:translateY(10px);
+ }
 }
 
-.story p{
-    max-width:760px;
-    margin:auto;
+.intro{
+ background:white;
+ text-align:center;
+}
+
+.intro p{
+ max-width:750px;
+ margin:auto;
+ font-size:1.15rem;
+ line-height:2;
+}
+
+.section-title{
+ text-align:center;
+ font-size:3rem;
+ margin-bottom:50px;
 }
 
 .countdown{
-    background:white;
+ background:var(--cream);
 }
 
 .counter{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:24px;
-    margin-top:30px;
+ display:flex;
+ justify-content:center;
+ gap:20px;
+ flex-wrap:wrap;
 }
 
-.box{
-    background:#f4f1ec;
-    padding:25px;
-    min-width:140px;
-    border-radius:16px;
-    text-align:center;
+.time-box{
+ width:160px;
+ background:white;
+ border-radius:18px;
+ padding:35px 15px;
+ text-align:center;
+ box-shadow:0 15px 35px rgba(0,0,0,.06);
 }
 
-.box span{
-    display:block;
-    font-size:2.5rem;
-    font-weight:600;
+.time-box span{
+ display:block;
+ font-size:3rem;
+ font-weight:600;
+ margin-bottom:10px;
 }
 
-.timeline{
-    display:grid;
-    gap:30px;
-    margin-top:40px;
-}
-
-.card{
-    background:white;
-    border-radius:18px;
-    padding:35px;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
-
-.card h3{
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-.notice{
-    background:white;
-    text-align:center;
-}
-
-.notice p{
-    max-width:700px;
-    margin:auto;
+.time-label{
+ letter-spacing:2px;
+ font-size:.8rem;
+ text-transform:uppercase;
+ color:#777;
 }
 
 @media(max-width:768px){
 
-h1{
-font-size:3.2rem;
+ h1{
+  font-size:3.4rem;
+ }
+
+ .monogram{
+  font-size:8rem;
+ }
+
+ .section-title{
+  font-size:2.3rem;
+ }
+
+ .time-box{
+  width:140px;
+ }
+
 }
 
-h2{
-font-size:2.2rem;
-}
+</style>
+</head>
 
-}
+<body>
 
-</style></head><body><section class="hero"><div class="hero-content"><div class="date">
-17 Octombrie 2026
-</div><h1>
+<section class="hero">
+
+<div class="monogram">
+A&B
+</div>
+
+<div class="hero-content">
+
+<div class="date">
+17 OCTOMBRIE 2026
+</div>
+
+<h1>
 Andreea & Bogdan
-</h1><p>Unele povești se scriu în timp.
+</h1>
 
-A noastră ne-a purtat prin zâmbete,
-provocări, visuri și momente de neuitat.
+<p class="hero-text">
+Cele mai frumoase amintiri se creează împreună cu oamenii dragi.
+De aceea, ne-ar face o deosebită plăcere să fiți alături de noi
+în ziua în care vom începe o nouă etapă a vieții noastre.
+</p>
 
-Astăzi, cu inimile pline de iubire și recunoștință,
-vă invităm să fiți alături de noi în ziua în care
-vom începe cel mai frumos capitol al vieții noastre.
+<div class="scroll">
+↓
+</div>
 
-</p><a href="#confirmare" class="btn">
-Detalii eveniment
-</a></div></section><section class="story"><div class="container"><h2>
+</div>
+
+</section>
+
+<section class="intro">
+
+<div class="container">
+
+<h2 class="section-title">
 17 • 10 • 2026
-</h2><p>Ne-ar face o deosebită plăcere să ne fiți alături
-în această zi specială și să împărtășim împreună
-emoțiile, bucuria și începutul unei noi aventuri.
+</h2>
 
-</p></div></section><section class="countdown"><div class="container"><h2>
+<p>
+Ne-ar face o deosebită plăcere să ne fiți alături și să împărtășim împreună emoțiile, bucuria și începutul unei noi aventuri.
+</p>
+
+</div>
+
+</section>
+
+<section class="countdown">
+
+<div class="container">
+
+<h2 class="section-title">
 Numărătoarea inversă
-</h2><div class="counter"><div class="box">
+</h2>
+
+<div class="counter">
+
+<div class="time-box">
 <span id="days">0</span>
-zile
-</div><div class="box">
+<div class="time-label">Zile</div>
+</div>
+
+<div class="time-box">
 <span id="hours">0</span>
-ore
-</div><div class="box">
+<div class="time-label">Ore</div>
+</div>
+
+<div class="time-box">
 <span id="minutes">0</span>
-minute
-</div><div class="box">
+<div class="time-label">Minute</div>
+</div>
+
+<div class="time-box">
 <span id="seconds">0</span>
-secunde
-</div></div></div></section>
-<section><div class="container"><h2>
-Programul zilei
-</h2><div class="timeline"><div class="card"><h3>
+<div class="time-label">Secunde</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+    <section>
+
+<div class="container">
+
+<h2 class="section-title">
+Momentele zilei
+</h2>
+
+<div class="timeline">
+
+<div class="card">
+
+<div style="font-size:3rem;text-align:center;margin-bottom:15px;">
+⛪
+</div>
+
+<h3 style="text-align:center;font-size:2.2rem;">
 Ceremonia religioasă
-</h3><p>
-<strong>Biserica Sf. Ursula</strong>
-</p><p>
-Sibiu
-</p><p>
-Ora: <strong>13:45</strong>
-</p><a
+</h3>
+
+<p style="text-align:center;margin-top:15px;font-size:1.2rem;">
+
+<strong>13:45</strong>
+
+</p>
+
+<p style="text-align:center;margin-top:10px;">
+
+Biserica Sf. Ursula
+
+</p>
+
+<div style="text-align:center; margin-top:30px;">
+
+<a
 class="btn"
 href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac"
 target="_blank">
 
-Deschide locația
+📍 Google Maps
 
-</a></div><div class="card"><h3>
-Petrecerea
-</h3><p>
-<strong>Versailles Weddings & Events</strong>
-</p><p>
-Sibiu
-</p><p>
-Ora: <strong>16:00</strong>
-</p><a
+</a>
+
+<a
+class="btn"
+style="margin-left:12px;background:#181818;"
+href="https://waze.com/ul?ll=45.7936,24.1465&navigate=yes"
+target="_blank">
+
+🚗 Waze
+
+</a>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="card">
+
+<div style="font-size:3rem;text-align:center;margin-bottom:15px;">
+🥂
+</div>
+
+<h3 style="text-align:center;font-size:2.2rem;">
+Recepția
+</h3>
+
+<p style="text-align:center;margin-top:15px;font-size:1.2rem;">
+
+<strong>16:00</strong>
+
+</p>
+
+<p style="text-align:center;margin-top:10px;">
+
+Versailles Weddings & Events
+
+</p>
+
+<div style="text-align:center;margin-top:30px;">
+
+<a
 class="btn"
 href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac"
 target="_blank">
 
-Deschide locația
+📍 Google Maps
 
-</a></div></div></div></section><section class="notice"><div class="container"><h2>
+</a>
+
+<a
+class="btn"
+style="margin-left:12px;background:#181818;"
+href="https://waze.com/ul?ll=45.7858,24.1258&navigate=yes"
+target="_blank">
+
+🚗 Waze
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="background:white;">
+
+<div class="container">
+
+<h2 class="section-title">
 Un mic detaliu
-</h2><p>Pentru a ne putea bucura împreună de începutul
-acestei seri speciale, vă rugăm să ajungeți la
-locația petrecerii la ora <strong>16:00</strong>.
+</h2>
 
-</p></div></section><section
-class="notice"
-id="confirmare"><div class="container"><h2>
+<p style="
+max-width:750px;
+margin:auto;
+text-align:center;
+font-size:1.1rem;
+line-height:2;
+">
+
+Ne-am bucura dacă veți ajunge la locația petrecerii
+începând cu ora <strong>16:00</strong>, pentru a putea
+începe împreună această seară specială.
+
+</p>
+
+</div>
+
+</section>
+<section id="confirmare" style="background:#f8f6f2;">
+
+<div class="container">
+
+<h2 class="section-title">
 Confirmare participare
-</h2><p>Vă rugăm să ne confirmați prezența și numărul
+</h2>
+
+<p style="
+text-align:center;
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+line-height:2;
+">
+
+Vă rugăm să ne confirmați prezența și numărul
 de persoane până la data de
+
 <strong>1 octombrie 2026</strong>.
 
-</p><br><br>
+</p>
 
-<p><strong>Andreea</strong><br>
-0749401444
+<div style="
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:60px;
+">
 
-</p><br><p><strong>Bogdan</strong><br>
-0752634381
+<div class="card" style="max-width:320px;text-align:center;">
 
-</p></div></section>
-<footer><h3 style="font-size:2.5rem;">
+<h3>
+Andreea
+</h3>
+
+<p style="font-size:1.5rem;margin-top:20px;">
+📞 0749401444
+</p>
+
+</div>
+
+<div class="card" style="max-width:320px;text-align:center;">
+
+<h3>
+Bogdan
+</h3>
+
+<p style="font-size:1.5rem;margin-top:20px;">
+📞 0752634381
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="background:white;">
+
+<div class="container">
+
+<h2 class="section-title">
+Abia așteptăm să sărbătorim împreună
+</h2>
+
+<p style="
+max-width:760px;
+margin:auto;
+text-align:center;
+line-height:2;
+font-size:1.15rem;
+">
+
+Prezența voastră este cel mai frumos dar pe care îl putem primi.
+
+Vom păstra această zi în suflet pentru totdeauna,
+iar bucuria va fi cu atât mai mare dacă ne veți fi alături.
+
+</p>
+
+</div>
+
+</section>
+<footer style="
+background:#111;
+color:white;
+padding:120px 20px;
+text-align:center;
+position:relative;
+overflow:hidden;
+">
+
+<div style="
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-family:'Cormorant Garamond',serif;
+font-size:14rem;
+opacity:.04;
+letter-spacing:25px;
+user-select:none;
+pointer-events:none;
+">
+
+A&B
+
+</div>
+
+<div style="position:relative;z-index:2;">
+
+<div style="
+width:90px;
+height:2px;
+background:#b89b72;
+margin:0 auto 40px;
+"></div>
+
+<h2 style="
+font-size:4rem;
+margin-bottom:15px;
+font-weight:500;
+">
+
 Andreea & Bogdan
-</h3><p style="margin-top:15px;">Prezența voastră este cel mai frumos dar
-pe care îl putem primi.
 
-</p><p style="margin-top:10px;">Vă așteptăm cu drag să sărbătorim împreună
-această zi specială.
+</h2>
 
-</p><p style="margin-top:20px;color:#777;">
+<p style="
+letter-spacing:5px;
+text-transform:uppercase;
+color:#b89b72;
+margin-bottom:40px;
+">
+
 17 Octombrie 2026
-</p></footer><script>
 
-const weddingDate =
-new Date("October 17, 2026 13:45:00").getTime();
+</p>
 
-setInterval(() => {
+<p style="
+max-width:650px;
+margin:auto;
+line-height:2;
+font-size:1.1rem;
+color:#d9d9d9;
+">
+
+Vă mulțumim că faceți parte din povestea noastră.
+
+Abia așteptăm să împărtășim cu voi una dintre cele mai frumoase zile din viața noastră.
+
+</p>
+
+<h3 style="
+margin-top:70px;
+font-size:2.3rem;
+font-family:'Cormorant Garamond',serif;
+font-weight:400;
+">
+
+Vă așteptăm cu drag!
+
+</h3>
+
+<div style="
+width:90px;
+height:2px;
+background:#b89b72;
+margin:40px auto 0;
+"></div>
+
+</div>
+
+</footer>
+<script>
+
+const weddingDate = new Date("October 17, 2026 13:45:00").getTime();
+
+function updateCountdown(){
 
 const now = new Date().getTime();
 
 const distance = weddingDate - now;
 
-document.getElementById("days").innerText =
-Math.floor(
-distance / (1000 * 60 * 60 * 24)
-);
+if(distance < 0){
 
-document.getElementById("hours").innerText =
-Math.floor(
-(distance % (1000 * 60 * 60 * 24))
-/
-(1000 * 60 * 60)
-);
+document.getElementById("days").innerHTML="0";
+document.getElementById("hours").innerHTML="0";
+document.getElementById("minutes").innerHTML="0";
+document.getElementById("seconds").innerHTML="0";
 
-document.getElementById("minutes").innerText =
-Math.floor(
-(distance % (1000 * 60 * 60))
-/
-(1000 * 60)
-);
+return;
 
-document.getElementById("seconds").innerText =
-Math.floor(
-(distance % (1000 * 60))
-/
-1000
-);
+}
 
-},1000);
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
 
-</script></body>
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+
 </html>
