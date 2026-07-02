@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andreea & Bogdan | 17 Octombrie 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --black:#111;
+  --cream:#f6f3ee;
+  --gold:#b89b72;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Cormorant Garamond', serif;
+  background:var(--cream);
+  color:var(--black);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  overflow:hidden;
+}
+
+.hero img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(0.55);
+  transform:scale(1.05);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.ab{
+  font-size:3rem;
+  letter-spacing:8px;
+  margin-bottom:10px;
+}
+
+h1{
+  font-size:3.5rem;
+  font-weight:500;
+}
+
+.date{
+  margin-top:10px;
+  letter-spacing:4px;
+  font-size:1rem;
+  color:#e7d7b8;
+}
+
+.hero p{
+  margin-top:25px;
+  font-size:1.2rem;
+  line-height:1.6;
+}
+
+/* SECTION */
+section{
+  padding:90px 20px;
+  text-align:center;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+}
+
+/* COUNTDOWN */
+.countdown{
+  background:white;
+}
+
+.counter{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.box{
+  background:var(--cream);
+  padding:25px;
+  width:120px;
+  border-radius:10px;
+}
+
+.box span{
+  font-size:2rem;
+  font-weight:bold;
+}
+
+/* PROGRAM */
+.card{
+  background:white;
+  padding:30px;
+  margin:15px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  text-decoration:none;
+}
+
+/* CONFIRM */
+.confirm{
+  background:#111;
+  color:white;
+}
+
+.phone{
+  margin-top:20px;
+  font-size:1.2rem;
+}
+
+/* FOOTER */
+footer{
+  background:#0d0d0d;
+  color:white;
+  padding:80px 20px;
+  text-align:center;
+}
+
+footer h2{
+  font-size:2.5rem;
+  letter-spacing:2px;
+}
+
+footer p{
+  margin-top:10px;
+  color:#bbb;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+
+<img src="WhatsApp Image 2026-06-16 at 22.57.58.jpeg">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<div class="ab">A | B</div>
+
+<h1>Andreea & Bogdan</h1>
+
+<div class="date">17 OCTOMBRIE 2026</div>
+
+<p>
+Unele povești se scriu în timp.  
+A noastră ne-a purtat prin zâmbete, provocări și visuri.  
+Astăzi vă invităm să fiți alături de noi.
+</p>
+
+</div>
+
+</div>
+
+<!-- COUNTDOWN -->
+<section class="countdown">
+<h2>Numărătoarea inversă</h2>
+
+<div class="container">
+
+<div class="counter">
+<div class="box"><span id="days">0</span><br>Zile</div>
+<div class="box"><span id="hours">0</span><br>Ore</div>
+<div class="box"><span id="minutes">0</span><br>Minute</div>
+<div class="box"><span id="seconds">0</span><br>Secunde</div>
+</div>
+
+</div>
+</section>
+
+<!-- PROGRAM -->
+<section>
+<h2>Programul zilei</h2>
+
+<div class="container">
+
+<div class="card">
+<h3>Ceremonia religioasă</h3>
+<p>13:45 - Sf. Ursula, Sibiu</p>
+<a class="btn" href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac">Google Maps</a>
+</div>
+
+<div class="card">
+<h3>Recepția</h3>
+<p>16:00 - Versailles Weddings & Events</p>
+<a class="btn" href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac">Google Maps</a>
+</div>
+
+<p style="margin-top:30px;">
+Vă rugăm să ajungeți la ora 16:00 la locația petrecerii.
+</p>
+
+</div>
+</section>
+
+<!-- CONFIRM -->
+<section class="confirm">
+<h2>Confirmare participare</h2>
+
+<p>Vă rugăm să confirmați până la 1 octombrie 2026</p>
+
+<div class="phone">Andreea: 0749401444</div>
+<div class="phone">Bogdan: 0752634381</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<h2>A | B</h2>
+<p>Andreea & Bogdan — 17 Octombrie 2026</p>
+<p>Vă așteptăm cu drag</p>
+</footer>
+
+<script>
+
+const wedding = new Date("Oct 17, 2026 13:45:00").getTime();
+
+setInterval(()=>{
+
+const now = new Date().getTime();
+const d = wedding - now;
+
+document.getElementById("days").innerText = Math.floor(d/(1000*60*60*24));
+document.getElementById("hours").innerText = Math.floor((d%(1000*60*60*24))/(1000*60*60));
+document.getElementById("minutes").innerText = Math.floor((d%(1000*60*60))/(1000*60));
+document.getElementById("seconds").innerText = Math.floor((d%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
