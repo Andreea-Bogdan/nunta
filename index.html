@@ -696,21 +696,6 @@ font-size:8rem;
 </head>
 
 <body>
-    <div id="loader">
-
-    <div class="loader-content">
-
-        <div class="monogram">
-            A | B
-        </div>
-
-        <div class="hero-date">
-            17 octombrie 2026
-        </div>
-
-    </div>
-
-</div>
 
 <section class="hero">
 
@@ -1096,29 +1081,6 @@ document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/100
 updateCountdown();
 
 setInterval(updateCountdown,1000);
-
-
-// ------------ LOADER ------------
-
-window.addEventListener("load",()=>{
-
-const loader=document.getElementById("loader");
-
-loader.style.transition="opacity 1.2s ease";
-
-setTimeout(()=>{
-
-loader.style.opacity="0";
-
-setTimeout(()=>{
-
-loader.style.display="none";
-
-},1200);
-
-},1700);
-
-});
 
 
 // ---------- SCROLL ANIMATION ----------
