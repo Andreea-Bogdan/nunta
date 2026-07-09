@@ -1,280 +1,17 @@
 <!DOCTYPE html>
 <html lang="ro">
-    const loader=document.getElementById("loader");
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andreea & Bogdan</title>
 
-    <title>Andreea & Bogdan | 17 Octombrie 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
-    /*==========================
-LOADER
-===========================*/
-
-#loader{
-
-position:fixed;
-
-inset:0;
-
-background:#111;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-z-index:9999;
-
-transition:1.2s;
-
-}
-
-.loader-content{
-
-text-align:center;
-
-}
-
-.loader-logo{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:4.5rem;
-
-color:#c8a66a;
-
-letter-spacing:8px;
-
-}
-
-.loader-logo span{
-
-padding:0 15px;
-
-}
-
-.loader-content p{
-
-margin-top:20px;
-
-letter-spacing:4px;
-
-color:white;
-
-}
-
-/*==========================
-NAVBAR
-===========================*/
-
-header{
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-padding:22px 50px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-background:rgba(17,17,17,.75);
-
-backdrop-filter:blur(18px);
-
-z-index:1000;
-
-transition:.4s;
-
-}
-
-.nav-logo{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:2rem;
-
-color:#c8a66a;
-
-}
-
-.nav-logo span{
-
-padding:0 8px;
-
-}
-
-nav{
-
-display:flex;
-
-gap:35px;
-
-}
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:.95rem;
-
-transition:.3s;
-
-letter-spacing:1px;
-
-}
-
-nav a:hover{
-
-color:#c8a66a;
-
-}
-
-/*==========================
-TIMELINE
-===========================*/
-
-.timeline{
-
-padding:120px 20px;
-
-background:#161616;
-
-text-align:center;
-
-}
-
-.timeline h2{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:3rem;
-
-color:#c8a66a;
-
-margin-bottom:80px;
-
-}
-
-.timeline-wrapper{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-flex-wrap:wrap;
-
-gap:20px;
-
-}
-
-.timeline-item{
-
-width:220px;
-
-}
-
-.circle{
-
-width:24px;
-
-height:24px;
-
-margin:auto;
-
-border-radius:50%;
-
-background:#c8a66a;
-
-box-shadow:0 0 18px rgba(200,166,106,.5);
-
-margin-bottom:25px;
-
-}
-
-.timeline-item h3{
-
-font-size:2rem;
-
-font-family:'Cormorant Garamond',serif;
-
-color:white;
-
-margin-bottom:12px;
-
-}
-
-.timeline-item p{
-
-color:#cfcfcf;
-
-}
-
-.timeline-line{
-
-width:90px;
-
-height:2px;
-
-background:#c8a66a;
-
-}
-
-@media(max-width:900px){
-
-.timeline-wrapper{
-
-flex-direction:column;
-
-}
-
-.timeline-line{
-
-width:2px;
-
-height:60px;
-
-}
-
-header{
-
-padding:18px;
-
-}
-
-nav{
-
-display:none;
-
-}
-
-}
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -285,51 +22,26 @@ display:none;
 
 <div class="overlay"></div>
 
-<img src="images/hero.jpg" class="hero-image">
-
 <div class="hero-content">
 
-<div class="logo">
-
-<span>A</span>
-
-<div class="line"></div>
-
-<span>B</span>
-
+<div class="monogram">
+A <span>|</span> B
 </div>
 
-<h1>
+<h1>Andreea & Bogdan</h1>
 
-<span>Andreea</span>
-
-<span class="amp">&</span>
-
-<span>Bogdan</span>
-
-</h1>
-
-<h2>17 OCTOMBRIE 2026</h2>
+<div class="date">
+17 Octombrie 2026
+</div>
 
 <p class="intro">
-
 Unele povești se scriu în timp.<br>
-
 A noastră ne-a purtat prin zâmbete, provocări, visuri și momente de neuitat.<br><br>
 
 Astăzi, cu inimile pline de recunoștință și iubire,
-
-vă invităm să fiți alături de noi în ziua în care
-
-vom începe cel mai frumos capitol al vieții noastre.
-
+vă invităm să fiți alături de noi în ziua în care vom începe
+cel mai frumos capitol al vieții noastre.
 </p>
-
-<a href="#countdown" class="scroll">
-
-↓
-
-</a>
 
 </div>
 
@@ -337,42 +49,30 @@ vom începe cel mai frumos capitol al vieții noastre.
 
 <!-- COUNTDOWN -->
 
-<section id="countdown" class="countdown">
+<section class="countdown-section">
 
 <h2>Numărătoarea inversă</h2>
 
-<div class="timer">
+<div id="countdown">
 
-<div>
-
-<h3 id="days">0</h3>
-
+<div class="box">
+<span id="days">0</span>
 <p>Zile</p>
-
 </div>
 
-<div>
-
-<h3 id="hours">0</h3>
-
+<div class="box">
+<span id="hours">0</span>
 <p>Ore</p>
-
 </div>
 
-<div>
-
-<h3 id="minutes">0</h3>
-
+<div class="box">
+<span id="minutes">0</span>
 <p>Minute</p>
-
 </div>
 
-<div>
-
-<h3 id="seconds">0</h3>
-
+<div class="box">
+<span id="seconds">0</span>
 <p>Secunde</p>
-
 </div>
 
 </div>
@@ -381,7 +81,7 @@ vom începe cel mai frumos capitol al vieții noastre.
 
 <!-- PROGRAM -->
 
-<section class="program">
+<section class="section">
 
 <h2>Programul zilei</h2>
 
@@ -389,77 +89,113 @@ vom începe cel mai frumos capitol al vieții noastre.
 
 <div class="card">
 
-<div class="icon">⛪</div>
-
 <h3>Ceremonia religioasă</h3>
 
-<h4>13:45</h4>
+<div class="time">13:45</div>
 
 <p>
-
-Biserica Sf. Ursula (Ursulinelor)
-
-<br>
-
+Biserica Sf. Ursula (Ursulinelor)<br>
 Sibiu
-
 </p>
 
-<div class="buttons">
-
-<a href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac" target="_blank">
-
-Google Maps
-
+<a class="btn"
+href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac"
+target="_blank">
+Vezi locația
 </a>
-
-<a href="https://waze.com/ul?ll=45.793502,24.151800&navigate=yes" target="_blank">
-
-Waze
-
-</a>
-
-</div>
 
 </div>
 
 <div class="card">
 
-<div class="icon">🥂</div>
-
 <h3>Petrecerea</h3>
 
-<h4>16:00</h4>
+<div class="time">16:00</div>
 
 <p>
-
-Versailles Weddings & Events
-
+Versailles Weddings & Events<br>
+Sibiu
 </p>
 
-<div class="buttons">
-
-<a href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac" target="_blank">
-
-Google Maps
-
-</a>
-
-<a href="https://waze.com/ul?ll=45.786300,24.161300&navigate=yes" target="_blank">
-
-Waze
-
+<a class="btn"
+href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac"
+target="_blank">
+Vezi locația
 </a>
 
 </div>
 
 </div>
 
-</div>
+<p class="arrival">
+Vă rugăm cu drag să ajungeți la locația petrecerii începând cu ora 16:00,
+pentru a ne bucura împreună de fiecare moment al acestei zile speciale.
+</p>
 
-<div class="arrival">
+</section>
 
-Vă rugăm să ajungeți la locația petrecerii începând cu ora <strong>16:00</strong>, pentru a ne bucura împreună de fiecare moment al acestei zile speciale.
+<!-- INVITAT SPECIAL -->
+
+<section class="dark-section">
+
+<h2>Invitat Special</h2>
+
+<p class="special">
+Beto Adam și formația
+</p>
+
+</section>
+
+<!-- MENIU -->
+
+<section class="section">
+
+<h2>Meniu</h2>
+
+<div class="menu">
+
+<h3>Aperitiv</h3>
+
+<ul>
+<li>Salată de vinete cu roșii</li>
+<li>Chifteluțe</li>
+<li>Telemea</li>
+<li>Ruladă de chorizo</li>
+<li>Bruscheta cu cremă de brânză și crevete</li>
+<li>Somon afumat cu cremă de brânză pe pat de castravete</li>
+<li>Pastramă de vită cu măr și hrean</li>
+<li>Cașcaval</li>
+<li>Tartină cu piept de rață și dulceață de ceapă</li>
+<li>Icre</li>
+<li>Tartină cu salam de Sibiu și germeni de praz</li>
+<li>Roșie învelită în mozzarella în crustă de verdețuri</li>
+</ul>
+
+<h3>Felul I</h3>
+
+<p>
+Medalion Butterfish în crustă de susan negru
+cu mix de legume și sos.
+</p>
+
+<h3>Felul II</h3>
+
+<p>Ciorbă de rață.</p>
+
+<h3>Felul III</h3>
+
+<p>
+Duo din rasol de porc cu pulpă de pui dezosată,
+piure de cartofi cu parmezan,
+ulei de măsline cu verdețuri și reducție din vin roșu.
+</p>
+
+<h3>Felul IV</h3>
+
+<p>
+Sarmale în foi de varză cu costiță,
+mămăligă și smântână.
+</p>
 
 </div>
 
@@ -467,1335 +203,332 @@ Vă rugăm să ajungeți la locația petrecerii începând cu ora <strong>16:00<
 
 <!-- CONFIRMARE -->
 
-<section class="confirm">
+<section class="dark-section">
 
 <h2>Confirmarea participării</h2>
 
 <p>
-
-Vă rugăm să ne confirmați participarea până la data de
-
-<strong>1 Octombrie 2026</strong>.
-
+Vă rugăm să ne confirmați participarea,
+numărul de persoane și eventualele preferințe pentru meniu vegetarian,
+precum și numărul copiilor (aceștia beneficiază de meniu special).
 </p>
 
-<div class="phones">
+<p class="deadline">
+Confirmare până la data de <strong>1 Octombrie 2026</strong>
+</p>
+
+<div class="contacts">
 
 <div>
-
 <h3>Andreea</h3>
-
-<p>0749 401 444</p>
-
+<p>0749401444</p>
 </div>
 
 <div>
-
 <h3>Bogdan</h3>
-
-<p>0752 634 381</p>
-
+<p>0752634381</p>
 </div>
-
-</div>
-
-<div class="vegetarian">
-
-La confirmare vă rugăm să ne comunicați:
-
-<br><br>
-
-• dacă doriți meniu vegetarian;
-
-<br>
-
-• numărul copiilor care vor participa (copiii beneficiază de meniu special).
 
 </div>
 
 </section>
 
-<!-- INVITAT SPECIAL -->
+<!-- FINAL -->
 
-<section class="artist">
+<section class="footer-section">
 
-<h2>Invitat Special</h2>
-
-<h3>Beto Adam & Formația</h3>
-
-</section>
-
-<!-- MENIU -->
-
-<section class="menu">
-
-<h2>Meniu</h2>
-
-<div class="menu-block">
-
-<h3>Aperitiv</h3>
-
-<ul>
-
-<li>Salată de vinete cu roșii</li>
-
-<li>Chifteluțe</li>
-
-<li>Telemea</li>
-
-<li>Ruladă de chorizo</li>
-
-<li>Bruschetă cu cremă de brânză și crevete</li>
-
-<li>Somon afumat cu cremă de brânză pe pat de castravete</li>
-
-<li>Pastramă de vită cu măr și hrean</li>
-
-<li>Cașcaval</li>
-
-<li>Tartină cu piept de rață și dulceață de ceapă</li>
-
-<li>Icre</li>
-
-<li>Tartină cu salam de Sibiu și germeni de praz</li>
-
-<li>Roșie învelită în mozzarella în crustă de verdețuri</li>
-
-</ul>
-
-<h3>Felul I</h3>
-
-<p>
-
-Medalion Butterfish în crustă de susan negru cu mix de legume și sos.
-
-</p>
-
-<h3>Felul II</h3>
-
-<p>
-
-Ciorbă de rață.
-
-</p>
-
-<h3>Felul III</h3>
-
-<p>
-
-Duo din rasol de porc cu pulpă de pui dezosată,
-
-piure de cartofi cu parmezan,
-
-ulei de măsline cu verdețuri și reducție din vin roșu.
-
-</p>
-
-<h3>Felul IV</h3>
-
-<p>
-
-Sarmale în foi de varză cu costiță,
-
-mămăligă și smântână.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="footer-logo">
-
+<div class="monogram-bottom">
 A <span>|</span> B
-
 </div>
 
 <p>
-
 Prezența voastră este cel mai frumos dar pe care îl putem primi.
-
 </p>
 
 <p>
-
-Vă așteptăm cu drag să sărbătorim împreună această zi specială.
-
+Vă așteptăm cu drag să sărbătorim împreună această zi specială!
 </p>
 
 <h3>Vă așteptăm cu drag!</h3>
 
-</footer>
+</section>
 
 <script src="script.js"></script>
-    window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-loader.style.opacity="0";
-
-loader.style.visibility="hidden";
-
-},1800);
-
-});
 
 </body>
-
 </html>
-/* =========================
-   RESET
-========================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#111111;
-    color:#ffffff;
-    overflow-x:hidden;
-    line-height:1.8;
+font-family:'Montserrat',sans-serif;
+background:#f8f5ef;
+color:#222;
+line-height:1.8;
 }
 
-/* =========================
-   VARIABLES
-========================= */
-
-:root{
-
-    --gold:#c8a66a;
-
-    --dark:#111111;
-
-    --cream:#f7f4ef;
-
-    --white:#ffffff;
-
-    --gray:#d4d4d4;
-
+h1,h2,h3,.monogram{
+font-family:'Cormorant Garamond',serif;
 }
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
-
-    position:relative;
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    overflow:hidden;
-
-}
-
-.hero-image{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    filter:blur(2px);
-
-    transform:scale(1.05);
-
+height:100vh;
+position:relative;
+background:
+url("WhatsApp Image 2026-06-16 at 22.57.58.jpeg")
+center center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 }
 
 .overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.58);
-
-    z-index:1;
-
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.45),
+rgba(0,0,0,0.65)
+);
 }
 
 .hero-content{
-
-    position:relative;
-
-    z-index:2;
-
-    max-width:900px;
-
-    padding:40px 25px;
-
-    animation:fadeUp 1.6s ease;
-
+position:relative;
+z-index:2;
+max-width:900px;
+padding:20px;
+color:white;
 }
 
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-bottom:40px;
-
+.monogram{
+font-size:70px;
+font-weight:300;
+letter-spacing:10px;
+color:#d4b06a;
 }
 
-.logo span{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:4rem;
-
-    color:var(--gold);
-
-    font-weight:400;
-
-}
-
-.logo .line{
-
-    width:2px;
-
-    height:70px;
-
-    background:var(--gold);
-
+.monogram span{
+margin:0 10px;
 }
 
 .hero h1{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-
-    margin-bottom:25px;
-
+font-size:72px;
+font-weight:400;
 }
 
-.hero h1 span{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:4.5rem;
-
-    font-weight:400;
-
-}
-
-.amp{
-
-    color:var(--gold);
-
-    font-size:3rem !important;
-
-}
-
-.hero h2{
-
-    letter-spacing:4px;
-
-    color:var(--gold);
-
-    margin-bottom:35px;
-
-    font-weight:400;
-
+.date{
+margin-top:15px;
+font-size:22px;
+letter-spacing:3px;
+color:#d4b06a;
 }
 
 .intro{
-
-    max-width:800px;
-
-    margin:auto;
-
-    color:#f3f3f3;
-
-    font-size:1.05rem;
-
+margin-top:40px;
+font-size:20px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
 }
 
-.scroll{
-
-    display:inline-block;
-
-    margin-top:45px;
-
-    color:var(--gold);
-
-    text-decoration:none;
-
-    font-size:2rem;
-
-    animation:bounce 2s infinite;
-
+.countdown-section{
+background:#111;
+padding:80px 20px;
+text-align:center;
+color:white;
 }
 
-/* =========================
-   COUNTDOWN
-========================= */
-
-.countdown{
-
-    padding:120px 20px;
-
-    background:#0d0d0d;
-
-    text-align:center;
-
+.countdown-section h2{
+font-size:42px;
+margin-bottom:40px;
+color:#d4b06a;
 }
 
-.countdown h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:3rem;
-
-    color:var(--gold);
-
-    margin-bottom:60px;
-
+#countdown{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
-.timer{
-
-    display:flex;
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-    gap:25px;
-
+.box{
+border:1px solid #d4b06a;
+padding:25px;
+min-width:140px;
 }
 
-.timer div{
-
-    width:180px;
-
-    border:1px solid rgba(200,166,106,.35);
-
-    padding:35px 20px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.02);
-
-    backdrop-filter:blur(10px);
-
+.box span{
+font-size:50px;
+color:#d4b06a;
 }
 
-.timer h3{
-
-    font-size:4rem;
-
-    color:var(--gold);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-weight:500;
-
+.section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
 }
 
-.timer p{
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    color:#cfcfcf;
-
-    margin-top:10px;
-
-}
-
-/* =========================
-   PROGRAM
-========================= */
-
-.program{
-
-    background:var(--cream);
-
-    color:#222;
-
-    padding:120px 20px;
-
-}
-
-.program h2{
-
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:3rem;
-
-    margin-bottom:70px;
-
+.section h2,
+.dark-section h2{
+text-align:center;
+font-size:50px;
+margin-bottom:50px;
 }
 
 .cards{
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:40px;
-
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 .card{
-
-    background:white;
-
-    padding:50px;
-
-    border-radius:20px;
-
-    text-align:center;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-    transition:.35s;
-
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+width:350px;
+text-align:center;
 }
 
-.card:hover{
-
-    transform:translateY(-8px);
-
+.time{
+font-size:42px;
+color:#c59d4d;
+margin:15px 0;
 }
 
-.icon{
-
-    font-size:3rem;
-
-    margin-bottom:20px;
-
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:#111;
+color:white;
+text-decoration:none;
+border-radius:8px;
 }
-
-.card h3{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    margin-bottom:15px;
-
-}
-
-.card h4{
-
-    color:var(--gold);
-
-    font-size:2.4rem;
-
-    margin-bottom:20px;
-
-}
-
-.card p{
-
-    margin-bottom:30px;
-
-    color:#555;
-
-}
-
-.buttons{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:15px;
-
-    flex-wrap:wrap;
-
-}
-
-.buttons a{
-
-    background:#111111;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:14px 24px;
-
-    border-radius:10px;
-
-    transition:.3s;
-
-}
-
-.buttons a:hover{
-
-    background:var(--gold);
-
-    color:#111;
-
-}
-
-<section class="timeline">
-
-<h2>Ziua noastră</h2>
-
-<div class="timeline-wrapper">
-
-<div class="timeline-item">
-
-<div class="circle"></div>
-
-<h3>13:45</h3>
-
-<p>Ceremonia religioasă</p>
-
-</div>
-
-<div class="timeline-line"></div>
-
-<div class="timeline-item">
-
-<div class="circle"></div>
-
-<h3>16:00</h3>
-
-<p>Primirea invitaților</p>
-
-</div>
-
-<div class="timeline-line"></div>
-
-<div class="timeline-item">
-
-<div class="circle"></div>
-
-<h3>16:30</h3>
-
-<p>Începerea petrecerii</p>
-
-</div>
-
-<div class="timeline-line"></div>
-
-<div class="timeline-item">
-
-<div class="circle"></div>
-
-<h3>Până dimineața</h3>
-
-<p>Dans, voie bună și amintiri ❤️</p>
-
-</div>
-
-</div>
-
-</section>
-
-/* =========================
-   ARRIVAL
-========================= */
 
 .arrival{
-
-    max-width:900px;
-
-    margin:70px auto 0;
-
-    text-align:center;
-
-    font-size:1.1rem;
-
-    color:#555;
-
-    line-height:2;
-
+text-align:center;
+margin-top:50px;
+font-size:18px;
 }
 
-/* =========================
-   CONFIRM
-========================= */
-
-.confirm{
-
-    background:#111111;
-
-    color:white;
-
-    padding:120px 20px;
-
-    text-align:center;
-
+.dark-section{
+background:#111;
+color:white;
+padding:90px 20px;
+text-align:center;
 }
 
-.confirm h2{
-
-    font-family:'Cormorant Garamond',serif;
-
-    color:var(--gold);
-
-    font-size:3rem;
-
-    margin-bottom:35px;
-
+.special{
+font-size:36px;
+color:#d4b06a;
 }
-
-.confirm p{
-
-    max-width:700px;
-
-    margin:auto;
-
-    color:#d7d7d7;
-
-}
-
-.phones{
-
-    margin-top:60px;
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:80px;
-
-    flex-wrap:wrap;
-
-}
-
-.phones div{
-
-    border:1px solid rgba(200,166,106,.35);
-
-    padding:35px;
-
-    min-width:240px;
-
-    border-radius:18px;
-
-    background:rgba(255,255,255,.03);
-
-}
-
-.phones h3{
-
-    color:var(--gold);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    margin-bottom:15px;
-
-}
-
-.phones p{
-
-    font-size:1.2rem;
-
-    letter-spacing:1px;
-
-}
-
-.vegetarian{
-
-    max-width:700px;
-
-    margin:70px auto 0;
-
-    color:#cccccc;
-
-    line-height:2;
-
-}
-
-/* =========================
-   ARTIST
-========================= */
-
-.artist{
-
-    padding:120px 20px;
-
-    text-align:center;
-
-    background:linear-gradient(#181818,#111111);
-
-}
-
-.artist h2{
-
-    color:var(--gold);
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:3rem;
-
-}
-
-.artist h3{
-
-    margin-top:25px;
-
-    font-size:2.2rem;
-
-    font-weight:300;
-
-    letter-spacing:3px;
-
-}
-
-/* =========================
-   MENU
-========================= */
 
 .menu{
-
-    background:var(--cream);
-
-    color:#222;
-
-    padding:120px 20px;
-
+max-width:900px;
+margin:auto;
 }
 
-.menu h2{
-
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:3rem;
-
-    margin-bottom:70px;
-
+.menu h3{
+font-size:34px;
+margin-top:40px;
+margin-bottom:15px;
+color:#b98c3d;
 }
 
-.menu-block{
-
-    max-width:950px;
-
-    margin:auto;
-
-    background:white;
-
-    padding:60px;
-
-    border-radius:25px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-
+.menu ul{
+padding-left:20px;
 }
 
-.menu-block h3{
-
-    margin-top:35px;
-
-    margin-bottom:20px;
-
-    color:var(--gold);
-
-    font-size:2rem;
-
-    font-family:'Cormorant Garamond',serif;
-
+.contacts{
+display:flex;
+justify-content:center;
+gap:80px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
-.menu-block ul{
-
-    padding-left:25px;
-
+.deadline{
+margin-top:30px;
+font-size:20px;
 }
 
-.menu-block li{
-
-    margin-bottom:12px;
-
-    color:#555;
-
+.footer-section{
+padding:100px 20px;
+background:#f8f5ef;
+text-align:center;
 }
 
-.menu-block p{
-
-    color:#555;
-
+.monogram-bottom{
+font-size:60px;
+color:#b98c3d;
+margin-bottom:20px;
+font-family:'Cormorant Garamond',serif;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-
-    padding:100px 20px;
-
-    text-align:center;
-
-    background:#111111;
-
+.footer-section h3{
+margin-top:30px;
+font-size:42px;
+color:#b98c3d;
 }
 
-.footer-logo{
+@media(max-width:768px){
 
-    font-family:'Cormorant Garamond',serif;
-
-    color:var(--gold);
-
-    font-size:3.5rem;
-
-    margin-bottom:30px;
-
+.hero h1{
+font-size:50px;
 }
 
-.footer-logo span{
-
-    padding:0 12px;
-
-}
-
-footer p{
-
-    max-width:700px;
-
-    margin:15px auto;
-
-    color:#d0d0d0;
-
-}
-
-footer h3{
-
-    margin-top:50px;
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:3rem;
-
-    color:var(--gold);
-
-    font-weight:400;
-
-}
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(50px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes bounce{
-
-    0%,100%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(12px);
-
-    }
-
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:900px){
-
-.hero h1 span{
-
-font-size:3rem;
-
-}
-
-.logo span{
-
-font-size:3rem;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.timer div{
-
-width:150px;
-
-}
-
-.menu-block{
-
-padding:35px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.hero{
-
-min-height:100svh;
-
-}
-
-.hero-content{
-
-padding:30px 18px;
-
-}
-
-.hero h1 span{
-
-font-size:2.4rem;
-
-}
-
-.hero h2{
-
-font-size:1rem;
-
-letter-spacing:3px;
-
+.monogram{
+font-size:45px;
 }
 
 .intro{
-
-font-size:.95rem;
-
+font-size:17px;
 }
 
-.logo{
-
-gap:18px;
-
-}
-
-.logo .line{
-
-height:50px;
-
-}
-
-.logo span{
-
-font-size:2.5rem;
-
-}
-
-.timer{
-
-gap:15px;
-
-}
-
-.timer div{
-
-width:130px;
-
-padding:25px 10px;
-
-}
-
-.timer h3{
-
-font-size:2.7rem;
-
-}
-
-.countdown h2,
-.program h2,
-.confirm h2,
-.artist h2,
-.menu h2{
-
-font-size:2.3rem;
-
-}
-
-.card{
-
-padding:35px 25px;
-
-}
-
-.buttons{
-
-flex-direction:column;
-
-}
-
-.buttons a{
-
-width:100%;
-
-}
-
-.phones{
-
-gap:25px;
-
-}
-
-.footer-logo{
-
-font-size:2.7rem;
-
-}
-
-footer h3{
-
-font-size:2.4rem;
-
+.section h2,
+.dark-section h2{
+font-size:38px;
 }
 
 }
-
-// ==========================
-// COUNTDOWN
-// ==========================
-
 const weddingDate = new Date("October 17, 2026 13:45:00").getTime();
 
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
+const timer = setInterval(() => {
 
-function updateCountdown() {
+const now = new Date().getTime();
 
-    const now = new Date().getTime();
+const distance = weddingDate - now;
 
-    const distance = weddingDate - now;
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-    if (distance < 0) {
+const hours = Math.floor(
+(distance % (1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
 
-        days.innerHTML = "0";
-        hours.innerHTML = "0";
-        minutes.innerHTML = "0";
-        seconds.innerHTML = "0";
+const minutes = Math.floor(
+(distance % (1000 * 60 * 60))
+/
+(1000 * 60)
+);
 
-        return;
-    }
+const seconds = Math.floor(
+(distance % (1000 * 60))
+/
+1000
+);
 
-    days.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
 
-    hours.innerHTML = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-    );
-
-    minutes.innerHTML = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-    );
-
-    seconds.innerHTML = Math.floor(
-        (distance % (1000 * 60)) /
-        1000
-    );
-
-}
-
-updateCountdown();
-
-setInterval(updateCountdown, 1000);
-
-// ==========================
-// APARIȚIE LA SCROLL
-// ==========================
-
-const observer = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-},{
-    threshold:0.15
-});
-
-document.querySelectorAll("section, footer").forEach(el=>{
-
-    el.classList.add("hidden");
-
-    observer.observe(el);
-
-});
-
-// ==========================
-// EFECT HOVER CARDURI
-// ==========================
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card=>{
-
-    card.addEventListener("mousemove",(e)=>{
-
-        const rect = card.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-
-        const y = e.clientY - rect.top;
-
-        card.style.background =
-        `radial-gradient(circle at ${x}px ${y}px,
-        rgba(200,166,106,.08),
-        white 65%)`;
-
-    });
-
-    card.addEventListener("mouseleave",()=>{
-
-        card.style.background = "white";
-
-    });
-
-});
-
-// ==========================
-// SCROLL LIN
-// ==========================
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-    anchor.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute("href"))
-            .scrollIntoView({
-
-                behavior: "smooth"
-
-            });
-
-    });
-
-});
-        /* =========================
-   SCROLL ANIMATION
-========================= */
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(70px);
-
-transition:1s;
-
-}
-
-.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-        <div id="loader">
-
-    <div class="loader-content">
-
-        <div class="loader-logo">
-
-            A <span>|</span> B
-
-        </div>
-
-        <p>17 Octombrie 2026</p>
-
-    </div>
-
-</div>
-
-        <header id="navbar">
-
-    <div class="nav-logo">
-
-        A <span>|</span> B
-
-    </div>
-
-    <nav>
-
-        <a href="#countdown">Countdown</a>
-
-        <a href=".program">Program</a>
-
-        <a href=".menu">Meniu</a>
-
-        <a href=".confirm">Confirmare</a>
-
-    </nav>
-
-</header>
+},1000);
