@@ -1,1032 +1,617 @@
 <!DOCTYPE html>
+<html lang="ro">
+    const loader=document.getElementById("loader");
 
-</head>
+<head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Andreea & Bogdan | 17 Octombrie 2026</title>
 
-    
-<title>Andreea & Bogdan | 17 Octombrie 2026</title>
+    <link rel="stylesheet" href="style.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    /*==========================
+LOADER
+===========================*/
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+#loader{
 
-<style>
+position:fixed;
 
-:root{
+inset:0;
 
---gold:#c8a56a;
---cream:#f7f4ef;
---black:#111111;
---text:#3d3d3d;
---white:#ffffff;
-
-}
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-background:var(--cream);
-
-font-family:'Inter',sans-serif;
-
-color:var(--text);
-
-overflow-x:hidden;
-
-line-height:1.8;
-
-}
-
-h1,h2,h3{
-
-font-family:'Cormorant Garamond',serif;
-
-font-weight:500;
-
-}
-
-section{
-
-padding:110px 24px;
-
-}
-
-.container{
-
-max-width:1180px;
-
-margin:auto;
-
-}
-
-.hero{
-
-height:100vh;
-
-background:
-
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-
-url("WhatsApp Image 2026-06-16 at 22.57.58.jpeg");
-
-background-size:cover;
-
-background-position:center;
+background:#111;
 
 display:flex;
+
+justify-content:center;
 
 align-items:center;
 
-justify-content:center;
+z-index:9999;
+
+transition:1.2s;
+
+}
+
+.loader-content{
 
 text-align:center;
 
-position:relative;
-
-overflow:hidden;
-
 }
 
-.hero::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-right:0;
-
-bottom:0;
-
-height:220px;
-
-background:linear-gradient(to bottom,transparent,var(--cream));
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:2;
-
-max-width:900px;
-
-padding:20px;
-
-color:white;
-
-animation:fadeHero 2s ease;
-
-}
-
-@keyframes fadeHero{
-
-from{
-
-opacity:0;
-
-transform:translateY(25px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:none;
-
-}
-
-}
-
-.monogram{
+.loader-logo{
 
 font-family:'Cormorant Garamond',serif;
 
-font-size:4.2rem;
+font-size:4.5rem;
 
-letter-spacing:18px;
+color:#c8a66a;
 
-color:#f4ead8;
-
-margin-bottom:18px;
+letter-spacing:8px;
 
 }
 
-.hero-date{
+.loader-logo span{
 
-letter-spacing:5px;
-
-font-size:.9rem;
-
-text-transform:uppercase;
-
-color:var(--gold);
-
-margin-bottom:30px;
+padding:0 15px;
 
 }
 
-.hero h1{
+.loader-content p{
 
-font-size:6rem;
-
-line-height:.95;
-
-font-weight:500;
-
-margin-bottom:30px;
-
-}
-
-.hero-text{
-
-font-size:1.15rem;
-
-max-width:760px;
-
-margin:auto;
-
-color:#efefef;
-
-}
-
-.scroll{
-
-margin-top:55px;
-
-font-size:2rem;
-
-color:var(--gold);
-
-animation:float 2s infinite;
-
-}
-
-@keyframes float{
-
-50%{
-
-transform:translateY(10px);
-
-}
-
-}
-
-.divider{
-
-width:90px;
-
-height:1px;
-
-background:var(--gold);
-
-margin:28px auto;
-
-}
-    .intro{
-
-background:var(--cream);
-
-text-align:center;
-
-}
-
-.intro h2{
-
-font-size:3.3rem;
-
-margin-bottom:25px;
-
-color:#222;
-
-}
-
-.intro p{
-
-max-width:760px;
-
-margin:auto;
-
-font-size:1.15rem;
-
-color:#555;
-
-}
-
-.countdown{
-
-background:#161616;
-
-color:white;
-
-text-align:center;
-
-}
-
-.section-title{
-
-font-size:3.2rem;
-
-margin-bottom:18px;
-
-text-align:center;
-
-color:#222;
-
-}
-
-.countdown .section-title{
-
-color:white;
-
-}
-
-.subtitle{
-
-text-align:center;
-
-color:var(--gold);
+margin-top:20px;
 
 letter-spacing:4px;
 
-text-transform:uppercase;
-
-font-size:.9rem;
-
-margin-bottom:55px;
+color:white;
 
 }
 
-.counter{
+/*==========================
+NAVBAR
+===========================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:22px 50px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(17,17,17,.75);
+
+backdrop-filter:blur(18px);
+
+z-index:1000;
+
+transition:.4s;
+
+}
+
+.nav-logo{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:2rem;
+
+color:#c8a66a;
+
+}
+
+.nav-logo span{
+
+padding:0 8px;
+
+}
+
+nav{
+
+display:flex;
+
+gap:35px;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:.95rem;
+
+transition:.3s;
+
+letter-spacing:1px;
+
+}
+
+nav a:hover{
+
+color:#c8a66a;
+
+}
+
+/*==========================
+TIMELINE
+===========================*/
+
+.timeline{
+
+padding:120px 20px;
+
+background:#161616;
+
+text-align:center;
+
+}
+
+.timeline h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:3rem;
+
+color:#c8a66a;
+
+margin-bottom:80px;
+
+}
+
+.timeline-wrapper{
 
 display:flex;
 
 justify-content:center;
 
-gap:22px;
+align-items:center;
 
 flex-wrap:wrap;
 
-}
-
-.time-box{
-
-width:170px;
-
-padding:34px 20px;
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:20px;
-
-background:rgba(255,255,255,.03);
-
-backdrop-filter:blur(8px);
+gap:20px;
 
 }
 
-.time-box span{
+.timeline-item{
 
-display:block;
+width:220px;
 
-font-size:3.2rem;
+}
+
+.circle{
+
+width:24px;
+
+height:24px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#c8a66a;
+
+box-shadow:0 0 18px rgba(200,166,106,.5);
+
+margin-bottom:25px;
+
+}
+
+.timeline-item h3{
+
+font-size:2rem;
 
 font-family:'Cormorant Garamond',serif;
 
-margin-bottom:8px;
-
-}
-
-.time-label{
-
-text-transform:uppercase;
-
-letter-spacing:3px;
-
-font-size:.8rem;
-
-color:#cfcfcf;
-
-}
-
-.timeline{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:40px;
-
-margin-top:60px;
-
-}
-
-.card{
-
-background:white;
-
-padding:55px 40px;
-
-border:1px solid rgba(200,165,106,.35);
-
-border-radius:28px;
-
-text-align:center;
-
-transition:.35s;
-
-box-shadow:0 18px 45px rgba(0,0,0,.06);
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 28px 60px rgba(0,0,0,.08);
-
-}
-
-.icon{
-
-font-size:3rem;
-
-margin-bottom:20px;
-
-}
-
-.card h3{
-
-font-size:2.2rem;
+color:white;
 
 margin-bottom:12px;
 
 }
 
-.hour{
+.timeline-item p{
 
-font-size:1.6rem;
-
-font-weight:600;
-
-margin-bottom:18px;
-
-color:var(--gold);
+color:#cfcfcf;
 
 }
 
-.location{
+.timeline-line{
 
-font-size:1.05rem;
+width:90px;
 
-margin-bottom:28px;
+height:2px;
 
-}
-    .btn{
-
-display:inline-block;
-
-padding:15px 34px;
-
-border:1px solid var(--gold);
-
-border-radius:50px;
-
-color:var(--gold);
-
-text-decoration:none;
-
-letter-spacing:1px;
-
-transition:.35s;
-
-font-weight:500;
+background:#c8a66a;
 
 }
 
-.btn:hover{
+@media(max-width:900px){
 
-background:var(--gold);
+.timeline-wrapper{
 
-color:#111;
-
-}
-
-.note{
-
-max-width:760px;
-
-margin:60px auto 0;
-
-text-align:center;
-
-font-size:1.08rem;
-
-color:#666;
+flex-direction:column;
 
 }
 
-.confirm{
+.timeline-line{
 
-background:#111;
+width:2px;
 
-color:white;
-
-text-align:center;
+height:60px;
 
 }
 
-.confirm .section-title{
+header{
 
-color:white;
-
-}
-
-.confirm p{
-
-max-width:700px;
-
-margin:0 auto 50px;
-
-color:#d9d9d9;
+padding:18px;
 
 }
 
-.contacts{
+nav{
 
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-flex-wrap:wrap;
-
-}
-
-.contact{
-
-width:300px;
-
-padding:40px;
-
-background:#1b1b1b;
-
-border:1px solid rgba(200,165,106,.25);
-
-border-radius:24px;
-
-}
-
-.contact h3{
-
-font-size:2rem;
-
-margin-bottom:18px;
-
-color:white;
-
-}
-
-.phone{
-
-font-size:1.25rem;
-
-color:var(--gold);
-
-letter-spacing:1px;
-
-}
-
-footer{
-
-background:#0d0d0d;
-
-color:white;
-
-padding:120px 24px;
-
-text-align:center;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-footer::before{
-
-content:"A | B";
-
-position:absolute;
-
-left:50%;
-
-top:50%;
-
-transform:translate(-50%,-50%);
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:13rem;
-
-letter-spacing:20px;
-
-opacity:.04;
-
-}
-
-footer .content{
-
-position:relative;
-
-z-index:2;
-
-}
-
-footer h2{
-
-font-size:4rem;
-
-margin-bottom:10px;
-
-}
-
-.footer-date{
-
-letter-spacing:5px;
-
-text-transform:uppercase;
-
-color:var(--gold);
-
-margin-bottom:30px;
-
-}
-
-footer p{
-
-max-width:700px;
-
-margin:auto;
-
-color:#d6d6d6;
-
-}
-
-.final{
-
-margin-top:45px;
-
-font-size:2rem;
-
-font-family:'Cormorant Garamond',serif;
-
-color:white;
-
-}
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:3.8rem;
-
-}
-
-.monogram{
-
-font-size:3rem;
-
-letter-spacing:10px;
-
-}
-
-.section-title{
-
-font-size:2.4rem;
-
-}
-
-.hero-text{
-
-font-size:1rem;
-
-}
-
-.time-box{
-
-width:145px;
-
-}
-
-.card{
-
-padding:40px 28px;
-
-}
-
-footer h2{
-
-font-size:2.8rem;
-
-}
-
-footer::before{
-
-font-size:8rem;
+display:none;
 
 }
 
 }
 
-</style>
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<!-- HERO -->
+
 <section class="hero">
 
-    <div class="hero-content">
+<div class="overlay"></div>
 
-        <div class="monogram">
+<img src="images/hero.jpg" class="hero-image">
 
-            A | B
+<div class="hero-content">
 
-        </div>
+<div class="logo">
 
-        <div class="divider"></div>
+<span>A</span>
 
-        <div class="hero-date">
+<div class="line"></div>
 
-            17 octombrie 2026
-
-        </div>
-
-        <h1>
-
-            Andreea & Bogdan
-
-        </h1>
-
-        <p class="hero-text">
-
-            Unele povești se scriu în timp.<br><br>
-
-            A noastră ne-a purtat prin zâmbete,
-            provocări, visuri și momente de neuitat.
-
-            <br><br>
-
-            Astăzi, cu inimile pline de recunoștință și iubire,
-            vă invităm să fiți alături de noi în ziua în care
-            vom începe cel mai frumos capitol al vieții noastre.
-
-        </p>
-
-        <div class="divider"></div>
-
-        <div class="scroll">
-
-            ↓
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="intro">
-
-    <div class="container">
-
-        <h2>
-
-            Vă asteptăm la petrecere!
-
-        </h2>
-
-        <p>
-
-            Ne-ar face o deosebită plăcere să împărtășim cu voi
-            emoțiile, bucuria și începutul unei noi aventuri.
-
-            <br><br>
-
-            Prezența voastră va transforma această zi
-            într-o amintire și mai frumoasă.
-
-        </p>
-
-    </div>
-
-</section>
-
-<section class="countdown">
-
-    <div class="container">
-
-        <div class="subtitle">
-
-            Până la marele "DA"
-
-        </div>
-
-        <h2 class="section-title">
-
-            Numărătoarea inversă
-
-        </h2>
-
-        <div class="counter">
-
-            <div class="time-box">
-
-                <span id="days">0</span>
-
-                <div class="time-label">
-
-                    Zile
-
-                </div>
-
-            </div>
-
-            <div class="time-box">
-
-                <span id="hours">0</span>
-
-                <div class="time-label">
-
-                    Ore
-
-                </div>
-
-            </div>
-
-            <div class="time-box">
-
-                <span id="minutes">0</span>
-
-                <div class="time-label">
-
-                    Minute
-
-                </div>
-
-            </div>
-
-            <div class="time-box">
-
-                <span id="seconds">0</span>
-
-                <div class="time-label">
-
-                    Secunde
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-
-Programul zilei
-
-</h2>
-
-<div class="timeline">
-
-<div class="card">
-
-<div class="icon">
-
-⛪
+<span>B</span>
 
 </div>
 
-<h3>
+<h1>
 
-Ceremonia religioasă
+<span>Andreea</span>
 
-</h3>
+<span class="amp">&</span>
 
-<div class="hour">
+<span>Bogdan</span>
 
-13:45
+</h1>
 
-</div>
+<h2>17 OCTOMBRIE 2026</h2>
 
-<div class="location">
+<p class="intro">
 
-Biserica Sf. Ursula (Ursulinelor)<br>
+Unele povești se scriu în timp.<br>
 
-Sibiu
+A noastră ne-a purtat prin zâmbete, provocări, visuri și momente de neuitat.<br><br>
 
-</div>
+Astăzi, cu inimile pline de recunoștință și iubire,
 
-<a class="btn"
+vă invităm să fiți alături de noi în ziua în care
 
-href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac"
-
-target="_blank">
-
-Google Maps
-
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon">
-
-🥂
-
-</div>
-
-<h3>
-
-Petrecerea
-
-</h3>
-
-<div class="hour">
-
-16:00
-
-</div>
-
-<div class="location">
-
-Versailles Weddings & Events<br>
-
-Sibiu
-
-</div>
-
-<a class="btn"
-
-href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac"
-
-target="_blank">
-
-Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-<p class="note">
-
-Vă rugăm să ajungeți la locația petrecerii începând cu ora
-<strong>16:00</strong>, pentru a putea începe împreună această seară specială.
+vom începe cel mai frumos capitol al vieții noastre.
 
 </p>
 
+<a href="#countdown" class="scroll">
+
+↓
+
+</a>
+
 </div>
 
 </section>
 
-<section class="confirm">
+<!-- COUNTDOWN -->
 
-<div class="container">
+<section id="countdown" class="countdown">
 
-<h2 class="section-title">
+<h2>Numărătoarea inversă</h2>
 
-Confirmare participare
+<div class="timer">
 
-</h2>
+<div>
+
+<h3 id="days">0</h3>
+
+<p>Zile</p>
+
+</div>
+
+<div>
+
+<h3 id="hours">0</h3>
+
+<p>Ore</p>
+
+</div>
+
+<div>
+
+<h3 id="minutes">0</h3>
+
+<p>Minute</p>
+
+</div>
+
+<div>
+
+<h3 id="seconds">0</h3>
+
+<p>Secunde</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAM -->
+
+<section class="program">
+
+<h2>Programul zilei</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="icon">⛪</div>
+
+<h3>Ceremonia religioasă</h3>
+
+<h4>13:45</h4>
 
 <p>
 
-Vă rugăm să ne confirmați prezența până la
-<strong>1 octombrie 2026</strong>.
+Biserica Sf. Ursula (Ursulinelor)
+
+<br>
+
+Sibiu
 
 </p>
 
-<div class="contacts">
+<div class="buttons">
 
-<div class="contact">
+<a href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac" target="_blank">
 
-<h3>
+Google Maps
 
-Andreea
+</a>
 
-</h3>
+<a href="https://waze.com/ul?ll=45.793502,24.151800&navigate=yes" target="_blank">
 
-<div class="phone">
+Waze
 
-0749 401 444
-
-</div>
-
-</div>
-
-<div class="contact">
-
-<h3>
-
-Bogdan
-
-</h3>
-
-<div class="phone">
-
-0752 634 381
+</a>
 
 </div>
 
 </div>
 
+<div class="card">
+
+<div class="icon">🥂</div>
+
+<h3>Petrecerea</h3>
+
+<h4>16:00</h4>
+
+<p>
+
+Versailles Weddings & Events
+
+</p>
+
+<div class="buttons">
+
+<a href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac" target="_blank">
+
+Google Maps
+
+</a>
+
+<a href="https://waze.com/ul?ll=45.786300,24.161300&navigate=yes" target="_blank">
+
+Waze
+
+</a>
+
 </div>
+
+</div>
+
+</div>
+
+<div class="arrival">
+
+Vă rugăm să ajungeți la locația petrecerii începând cu ora <strong>16:00</strong>, pentru a ne bucura împreună de fiecare moment al acestei zile speciale.
 
 </div>
 
 </section>
 
+<!-- CONFIRMARE -->
+
+<section class="confirm">
+
+<h2>Confirmarea participării</h2>
+
+<p>
+
+Vă rugăm să ne confirmați participarea până la data de
+
+<strong>1 Octombrie 2026</strong>.
+
+</p>
+
+<div class="phones">
+
+<div>
+
+<h3>Andreea</h3>
+
+<p>0749 401 444</p>
+
+</div>
+
+<div>
+
+<h3>Bogdan</h3>
+
+<p>0752 634 381</p>
+
+</div>
+
+</div>
+
+<div class="vegetarian">
+
+La confirmare vă rugăm să ne comunicați:
+
+<br><br>
+
+• dacă doriți meniu vegetarian;
+
+<br>
+
+• numărul copiilor care vor participa (copiii beneficiază de meniu special).
+
+</div>
+
+</section>
+
+<!-- INVITAT SPECIAL -->
+
+<section class="artist">
+
+<h2>Invitat Special</h2>
+
+<h3>Beto Adam & Formația</h3>
+
+</section>
+
+<!-- MENIU -->
+
+<section class="menu">
+
+<h2>Meniu</h2>
+
+<div class="menu-block">
+
+<h3>Aperitiv</h3>
+
+<ul>
+
+<li>Salată de vinete cu roșii</li>
+
+<li>Chifteluțe</li>
+
+<li>Telemea</li>
+
+<li>Ruladă de chorizo</li>
+
+<li>Bruschetă cu cremă de brânză și crevete</li>
+
+<li>Somon afumat cu cremă de brânză pe pat de castravete</li>
+
+<li>Pastramă de vită cu măr și hrean</li>
+
+<li>Cașcaval</li>
+
+<li>Tartină cu piept de rață și dulceață de ceapă</li>
+
+<li>Icre</li>
+
+<li>Tartină cu salam de Sibiu și germeni de praz</li>
+
+<li>Roșie învelită în mozzarella în crustă de verdețuri</li>
+
+</ul>
+
+<h3>Felul I</h3>
+
+<p>
+
+Medalion Butterfish în crustă de susan negru cu mix de legume și sos.
+
+</p>
+
+<h3>Felul II</h3>
+
+<p>
+
+Ciorbă de rață.
+
+</p>
+
+<h3>Felul III</h3>
+
+<p>
+
+Duo din rasol de porc cu pulpă de pui dezosată,
+
+piure de cartofi cu parmezan,
+
+ulei de măsline cu verdețuri și reducție din vin roșu.
+
+</p>
+
+<h3>Felul IV</h3>
+
+<p>
+
+Sarmale în foi de varză cu costiță,
+
+mămăligă și smântână.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
 <footer>
 
-<div class="content">
+<div class="footer-logo">
 
-<div class="divider"></div>
-
-<h2>
-
-Andreea & Bogdan
-
-</h2>
-
-<div class="footer-date">
-
-17 octombrie 2026
+A <span>|</span> B
 
 </div>
 
@@ -1034,96 +619,1183 @@ Andreea & Bogdan
 
 Prezența voastră este cel mai frumos dar pe care îl putem primi.
 
-<br><br>
+</p>
 
-Vrem să sărbătorim împreună această zi specială.
+<p>
+
+Vă așteptăm cu drag să sărbătorim împreună această zi specială.
 
 </p>
 
-<div class="final">
-
-Vă așteptăm cu drag!
-
-</div>
-
-<div class="divider"></div>
-
-</div>
+<h3>Vă așteptăm cu drag!</h3>
 
 </footer>
-<script>
 
-// ---------------- COUNTDOWN ----------------
+<script src="script.js"></script>
+    window.addEventListener("load",()=>{
 
-const weddingDate = new Date("October 17, 2026 13:45:00").getTime();
+setTimeout(()=>{
 
-function updateCountdown(){
+loader.style.opacity="0";
 
-const now = new Date().getTime();
+loader.style.visibility="hidden";
 
-const distance = weddingDate - now;
+},1800);
 
-if(distance<=0){
-
-["days","hours","minutes","seconds"].forEach(id=>{
-document.getElementById(id).innerHTML="0";
 });
 
-return;
+</body>
+
+</html>
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#111111;
+    color:#ffffff;
+    overflow-x:hidden;
+    line-height:1.8;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --gold:#c8a66a;
+
+    --dark:#111111;
+
+    --cream:#f7f4ef;
+
+    --white:#ffffff;
+
+    --gray:#d4d4d4;
 
 }
 
-document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24));
+/* =========================
+   HERO
+========================= */
 
-document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+.hero{
 
-document.getElementById("minutes").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60));
+    position:relative;
 
-document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    filter:blur(2px);
+
+    transform:scale(1.05);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.58);
+
+    z-index:1;
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    padding:40px 25px;
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-bottom:40px;
+
+}
+
+.logo span{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4rem;
+
+    color:var(--gold);
+
+    font-weight:400;
+
+}
+
+.logo .line{
+
+    width:2px;
+
+    height:70px;
+
+    background:var(--gold);
+
+}
+
+.hero h1{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:4.5rem;
+
+    font-weight:400;
+
+}
+
+.amp{
+
+    color:var(--gold);
+
+    font-size:3rem !important;
+
+}
+
+.hero h2{
+
+    letter-spacing:4px;
+
+    color:var(--gold);
+
+    margin-bottom:35px;
+
+    font-weight:400;
+
+}
+
+.intro{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:#f3f3f3;
+
+    font-size:1.05rem;
+
+}
+
+.scroll{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-size:2rem;
+
+    animation:bounce 2s infinite;
+
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+
+    padding:120px 20px;
+
+    background:#0d0d0d;
+
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    margin-bottom:60px;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.timer div{
+
+    width:180px;
+
+    border:1px solid rgba(200,166,106,.35);
+
+    padding:35px 20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.02);
+
+    backdrop-filter:blur(10px);
+
+}
+
+.timer h3{
+
+    font-size:4rem;
+
+    color:var(--gold);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-weight:500;
+
+}
+
+.timer p{
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    color:#cfcfcf;
+
+    margin-top:10px;
+
+}
+
+/* =========================
+   PROGRAM
+========================= */
+
+.program{
+
+    background:var(--cream);
+
+    color:#222;
+
+    padding:120px 20px;
+
+}
+
+.program h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    margin-bottom:70px;
+
+}
+
+.cards{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:40px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.icon{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.card h4{
+
+    color:var(--gold);
+
+    font-size:2.4rem;
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    margin-bottom:30px;
+
+    color:#555;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.buttons a{
+
+    background:#111111;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 24px;
+
+    border-radius:10px;
+
+    transition:.3s;
+
+}
+
+.buttons a:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+<section class="timeline">
+
+<h2>Ziua noastră</h2>
+
+<div class="timeline-wrapper">
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<h3>13:45</h3>
+
+<p>Ceremonia religioasă</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<h3>16:00</h3>
+
+<p>Primirea invitaților</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<h3>16:30</h3>
+
+<p>Începerea petrecerii</p>
+
+</div>
+
+<div class="timeline-line"></div>
+
+<div class="timeline-item">
+
+<div class="circle"></div>
+
+<h3>Până dimineața</h3>
+
+<p>Dans, voie bună și amintiri ❤️</p>
+
+</div>
+
+</div>
+
+</section>
+
+/* =========================
+   ARRIVAL
+========================= */
+
+.arrival{
+
+    max-width:900px;
+
+    margin:70px auto 0;
+
+    text-align:center;
+
+    font-size:1.1rem;
+
+    color:#555;
+
+    line-height:2;
+
+}
+
+/* =========================
+   CONFIRM
+========================= */
+
+.confirm{
+
+    background:#111111;
+
+    color:white;
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.confirm h2{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:var(--gold);
+
+    font-size:3rem;
+
+    margin-bottom:35px;
+
+}
+
+.confirm p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#d7d7d7;
+
+}
+
+.phones{
+
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.phones div{
+
+    border:1px solid rgba(200,166,106,.35);
+
+    padding:35px;
+
+    min-width:240px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+}
+
+.phones h3{
+
+    color:var(--gold);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.phones p{
+
+    font-size:1.2rem;
+
+    letter-spacing:1px;
+
+}
+
+.vegetarian{
+
+    max-width:700px;
+
+    margin:70px auto 0;
+
+    color:#cccccc;
+
+    line-height:2;
+
+}
+
+/* =========================
+   ARTIST
+========================= */
+
+.artist{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(#181818,#111111);
+
+}
+
+.artist h2{
+
+    color:var(--gold);
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+}
+
+.artist h3{
+
+    margin-top:25px;
+
+    font-size:2.2rem;
+
+    font-weight:300;
+
+    letter-spacing:3px;
+
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu{
+
+    background:var(--cream);
+
+    color:#222;
+
+    padding:120px 20px;
+
+}
+
+.menu h2{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3rem;
+
+    margin-bottom:70px;
+
+}
+
+.menu-block{
+
+    max-width:950px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:60px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.menu-block h3{
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    color:var(--gold);
+
+    font-size:2rem;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+.menu-block ul{
+
+    padding-left:25px;
+
+}
+
+.menu-block li{
+
+    margin-bottom:12px;
+
+    color:#555;
+
+}
+
+.menu-block p{
+
+    color:#555;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    background:#111111;
+
+}
+
+.footer-logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:var(--gold);
+
+    font-size:3.5rem;
+
+    margin-bottom:30px;
+
+}
+
+.footer-logo span{
+
+    padding:0 12px;
+
+}
+
+footer p{
+
+    max-width:700px;
+
+    margin:15px auto;
+
+    color:#d0d0d0;
+
+}
+
+footer h3{
+
+    margin-top:50px;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    color:var(--gold);
+
+    font-weight:400;
+
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(12px);
+
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.hero h1 span{
+
+font-size:3rem;
+
+}
+
+.logo span{
+
+font-size:3rem;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.timer div{
+
+width:150px;
+
+}
+
+.menu-block{
+
+padding:35px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+min-height:100svh;
+
+}
+
+.hero-content{
+
+padding:30px 18px;
+
+}
+
+.hero h1 span{
+
+font-size:2.4rem;
+
+}
+
+.hero h2{
+
+font-size:1rem;
+
+letter-spacing:3px;
+
+}
+
+.intro{
+
+font-size:.95rem;
+
+}
+
+.logo{
+
+gap:18px;
+
+}
+
+.logo .line{
+
+height:50px;
+
+}
+
+.logo span{
+
+font-size:2.5rem;
+
+}
+
+.timer{
+
+gap:15px;
+
+}
+
+.timer div{
+
+width:130px;
+
+padding:25px 10px;
+
+}
+
+.timer h3{
+
+font-size:2.7rem;
+
+}
+
+.countdown h2,
+.program h2,
+.confirm h2,
+.artist h2,
+.menu h2{
+
+font-size:2.3rem;
+
+}
+
+.card{
+
+padding:35px 25px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons a{
+
+width:100%;
+
+}
+
+.phones{
+
+gap:25px;
+
+}
+
+.footer-logo{
+
+font-size:2.7rem;
+
+}
+
+footer h3{
+
+font-size:2.4rem;
+
+}
+
+}
+
+// ==========================
+// COUNTDOWN
+// ==========================
+
+const weddingDate = new Date("October 17, 2026 13:45:00").getTime();
+
+const days = document.getElementById("days");
+const hours = document.getElementById("hours");
+const minutes = document.getElementById("minutes");
+const seconds = document.getElementById("seconds");
+
+function updateCountdown() {
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+
+        days.innerHTML = "0";
+        hours.innerHTML = "0";
+        minutes.innerHTML = "0";
+        seconds.innerHTML = "0";
+
+        return;
+    }
+
+    days.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    hours.innerHTML = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+    );
+
+    minutes.innerHTML = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+    );
+
+    seconds.innerHTML = Math.floor(
+        (distance % (1000 * 60)) /
+        1000
+    );
 
 }
 
 updateCountdown();
 
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 
+// ==========================
+// APARIȚIE LA SCROLL
+// ==========================
 
-// ---------- SCROLL ANIMATION ----------
+const observer = new IntersectionObserver((entries)=>{
 
-const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
 
-entries.forEach(entry=>{
+        if(entry.isIntersecting){
 
-if(entry.isIntersecting){
+            entry.target.classList.add("show");
 
-entry.target.style.opacity="1";
+        }
 
-entry.target.style.transform="translateY(0)";
+    });
+
+},{
+    threshold:0.15
+});
+
+document.querySelectorAll("section, footer").forEach(el=>{
+
+    el.classList.add("hidden");
+
+    observer.observe(el);
+
+});
+
+// ==========================
+// EFECT HOVER CARDURI
+// ==========================
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        card.style.background =
+        `radial-gradient(circle at ${x}px ${y}px,
+        rgba(200,166,106,.08),
+        white 65%)`;
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.background = "white";
+
+    });
+
+});
+
+// ==========================
+// SCROLL LIN
+// ==========================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href"))
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    });
+
+});
+        /* =========================
+   SCROLL ANIMATION
+========================= */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(70px);
+
+transition:1s;
 
 }
 
-});
+.show{
 
-},{threshold:.15});
+opacity:1;
 
-document.querySelectorAll("section,.card,.contact,footer").forEach(el=>{
+transform:translateY(0);
 
-el.style.opacity="0";
+}
 
-el.style.transform="translateY(40px)";
+        <div id="loader">
 
-el.style.transition=".8s ease";
+    <div class="loader-content">
 
-observer.observe(el);
+        <div class="loader-logo">
 
-});
+            A <span>|</span> B
 
-document.querySelector(".hero").style.opacity="1";
+        </div>
 
-document.querySelector(".hero").style.transform="none";
+        <p>17 Octombrie 2026</p>
 
-</script>
+    </div>
 
-</body>
+</div>
 
-</html>
+        <header id="navbar">
+
+    <div class="nav-logo">
+
+        A <span>|</span> B
+
+    </div>
+
+    <nav>
+
+        <a href="#countdown">Countdown</a>
+
+        <a href=".program">Program</a>
+
+        <a href=".menu">Meniu</a>
+
+        <a href=".confirm">Confirmare</a>
+
+    </nav>
+
+</header>
