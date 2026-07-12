@@ -1,201 +1,1378 @@
-<div class="hero-content">
+<!DOCTYPE html>
+<html lang="ro">
 
-    <div class="monogram">
+<head>
 
-        A | B
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Andreea & Bogdan | 17 Octombrie 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#101010;
+
+color:white;
+
+font-family:Montserrat,sans-serif;
+
+overflow-x:hidden;
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+h1,h2,h3{
+
+font-family:'Cormorant Garamond',serif;
+
+font-weight:500;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:url("WhatsApp Image 2026-06-16 at 22.57.58.jpeg") center center/cover;
+
+filter:brightness(40%);
+
+transform:scale(1.05);
+
+}
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(to bottom,
+
+rgba(0,0,0,.25),
+
+rgba(0,0,0,.55),
+
+#101010);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:10;
+
+max-width:900px;
+
+padding:20px;
+
+animation:fade 2s ease;
+
+}
+
+.monogram{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:72px;
+
+letter-spacing:8px;
+
+color:#e9d2a5;
+
+margin-bottom:15px;
+
+}
+
+.line{
+
+width:140px;
+
+height:1px;
+
+background:#c8a86b;
+
+margin:20px auto;
+
+}
+
+.names{
+
+font-size:78px;
+
+line-height:0.95;
+
+margin-bottom:25px;
+
+}
+
+.and{
+
+font-size:45px;
+
+color:#c8a86b;
+
+font-style:italic;
+
+}
+
+.date{
+
+font-size:25px;
+
+letter-spacing:4px;
+
+color:#d8bb83;
+
+margin-bottom:40px;
+
+text-transform:uppercase;
+
+}
+
+.hero-text{
+
+font-size:21px;
+
+line-height:1.9;
+
+max-width:820px;
+
+margin:auto;
+
+color:#efefef;
+
+font-weight:300;
+
+}
+
+.arrow{
+
+margin-top:60px;
+
+font-size:35px;
+
+color:#c8a86b;
+
+animation:jump 2s infinite;
+
+}
+
+@keyframes jump{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(10px);}
+100%{transform:translateY(0);}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* TITLURI */
+
+.title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.title h2{
+
+font-size:54px;
+
+color:#e9d2a5;
+
+letter-spacing:3px;
+
+}
+
+.title p{
+
+margin-top:15px;
+
+font-size:17px;
+
+color:#bdbdbd;
+
+}
+
+.gold{
+
+color:#d6b37a;
+
+}
+
+/* COUNTDOWN */
+
+.countdown{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:50px;
+
+}
+
+.box{
+
+border:1px solid rgba(200,168,107,.35);
+
+padding:35px 20px;
+
+text-align:center;
+
+border-radius:14px;
+
+background:#161616;
+
+transition:.4s;
+
+}
+
+.box:hover{
+
+transform:translateY(-8px);
+
+border-color:#d7b57b;
+
+}
+
+.number{
+
+font-size:58px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#edd3a2;
+
+}
+
+.label{
+
+margin-top:8px;
+
+letter-spacing:2px;
+
+font-size:13px;
+
+color:#b8b8b8;
+
+text-transform:uppercase;
+
+}
+
+@media(max-width:900px){
+
+.monogram{
+
+font-size:48px;
+
+}
+
+.names{
+
+font-size:54px;
+
+}
+
+.hero-text{
+
+font-size:18px;
+
+}
+
+.countdown{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+
+padding:70px 24px;
+
+}
+
+.names{
+
+font-size:46px;
+
+}
+
+.hero-text{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.title h2{
+
+font-size:42px;
+
+}
+
+.number{
+
+font-size:45px;
+
+}
+
+}
+    /* ===========================
+PROGRAMUL ZILEI
+=========================== */
+
+.schedule{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+margin-top:50px;
+
+}
+
+.card{
+
+background:#181818;
+
+border:1px solid rgba(200,168,107,.25);
+
+border-radius:18px;
+
+padding:45px 35px;
+
+text-align:center;
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#c8a86b;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+font-size:36px;
+
+color:#e7cf9c;
+
+margin-bottom:15px;
+
+}
+
+.time{
+
+font-size:42px;
+
+font-family:'Cormorant Garamond',serif;
+
+margin:20px 0;
+
+color:white;
+
+}
+
+.location{
+
+color:#d4d4d4;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:15px 34px;
+
+border-radius:50px;
+
+border:1px solid #c8a86b;
+
+color:#e9d2a5;
+
+transition:.35s;
+
+font-size:15px;
+
+letter-spacing:1px;
+
+}
+
+.button:hover{
+
+background:#c8a86b;
+
+color:black;
+
+}
+
+.note{
+
+margin-top:55px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#d6d6d6;
+
+line-height:1.8;
+
+}
+
+/* ===========================
+CONFIRMARE
+=========================== */
+
+.rsvp{
+
+background:#131313;
+
+}
+
+.contacts{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+margin-top:45px;
+
+}
+
+.person{
+
+text-align:center;
+
+padding:35px;
+
+border:1px solid rgba(200,168,107,.25);
+
+border-radius:16px;
+
+background:#181818;
+
+}
+
+.person h3{
+
+font-size:36px;
+
+margin-bottom:18px;
+
+color:#e8d1a0;
+
+}
+
+.phone{
+
+font-size:24px;
+
+letter-spacing:1px;
+
+}
+
+.info{
+
+margin-top:55px;
+
+text-align:center;
+
+font-size:18px;
+
+line-height:2;
+
+color:#d9d9d9;
+
+max-width:950px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+/* ===========================
+INVITAT SPECIAL
+=========================== */
+
+.artist{
+
+text-align:center;
+
+padding:90px 30px;
+
+}
+
+.artist-name{
+
+font-size:62px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#e8cf9b;
+
+margin-bottom:15px;
+
+letter-spacing:3px;
+
+}
+
+.artist p{
+
+font-size:22px;
+
+color:#dadada;
+
+}
+
+/* ===========================
+MENIU
+=========================== */
+
+.menu{
+
+display:grid;
+
+gap:35px;
+
+margin-top:60px;
+
+}
+
+.menu-card{
+
+background:#181818;
+
+border-radius:16px;
+
+padding:40px;
+
+border:1px solid rgba(200,168,107,.25);
+
+}
+
+.menu-card h3{
+
+font-size:40px;
+
+margin-bottom:25px;
+
+color:#e6cc96;
+
+}
+
+.menu-card ul{
+
+padding-left:20px;
+
+line-height:2;
+
+color:#efefef;
+
+}
+
+.menu-card li{
+
+margin-bottom:8px;
+
+}
+
+/* ===========================
+FINAL
+=========================== */
+
+.final{
+
+text-align:center;
+
+padding:110px 30px;
+
+background:linear-gradient(#111,#090909);
+
+}
+
+.final h2{
+
+font-size:68px;
+
+color:#e9d2a5;
+
+margin-bottom:25px;
+
+}
+
+.final p{
+
+font-size:22px;
+
+line-height:2;
+
+max-width:900px;
+
+margin:auto;
+
+color:#f1f1f1;
+
+}
+
+.signature{
+
+margin-top:55px;
+
+font-size:48px;
+
+font-family:'Cormorant Garamond',serif;
+
+color:#c8a86b;
+
+letter-spacing:5px;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.schedule{
+
+grid-template-columns:1fr;
+
+}
+
+.contacts{
+
+grid-template-columns:1fr;
+
+}
+
+.artist-name{
+
+font-size:48px;
+
+}
+
+.final h2{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.card{
+
+padding:35px 25px;
+
+}
+
+.menu-card{
+
+padding:30px;
+
+}
+
+.artist{
+
+padding:70px 20px;
+
+}
+
+.button{
+
+display:block;
+
+width:100%;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="monogram">
+            A │ B
+        </div>
+
+        <div class="line"></div>
+
+        <h1 class="names">
+            Andreea
+            <div class="and">&</div>
+            Bogdan
+        </h1>
+
+        <div class="date">
+            17 OCTOMBRIE 2026
+        </div>
+
+        <p class="hero-text">
+
+            Unele povești se scriu în timp.<br><br>
+
+            A noastră ne-a purtat prin zâmbete, provocări,
+            visuri și momente de neuitat.<br><br>
+
+            Astăzi, cu inimile pline de recunoștință și iubire,
+            vă invităm să fiți alături de noi în ziua în care
+            vom începe cel mai frumos capitol al vieții noastre.
+
+        </p>
+
+        <div class="arrow">
+
+            ↓
+
+        </div>
 
     </div>
 
-    <div class="divider"></div>
+</section>
 
-    <div class="hero-date">
+<!-- COUNTDOWN -->
 
-        17 octombrie 2026
+<section>
+
+    <div class="title">
+
+        <h2>Numărătoarea inversă</h2>
+
+        <p>
+            Până în ziua în care vom spune
+            <span class="gold">DA</span>.
+        </p>
 
     </div>
 
-    <h1>
+    <div class="countdown">
 
-        Andreea & Bogdan
+        <div class="box">
 
-    </h1>
+            <div id="days" class="number">
+                0
+            </div>
 
-    <p class="hero-text">
+            <div class="label">
+                Zile
+            </div>
 
-        Unele povești se scriu în timp.<br><br>
+        </div>
 
-        A noastră ne-a purtat prin zâmbete,
-        provocări, visuri și momente de neuitat.
+        <div class="box">
+
+            <div id="hours" class="number">
+                0
+            </div>
+
+            <div class="label">
+                Ore
+            </div>
+
+        </div>
+
+        <div class="box">
+
+            <div id="minutes" class="number">
+                0
+            </div>
+
+            <div class="label">
+                Minute
+            </div>
+
+        </div>
+
+        <div class="box">
+
+            <div id="seconds" class="number">
+                0
+            </div>
+
+            <div class="label">
+                Secunde
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROGRAM -->
+
+<section>
+
+    <div class="title">
+
+        <h2>Programul zilei</h2>
+
+        <p>
+            Un început frumos merită trăit împreună.
+        </p>
+
+    </div>
+
+    <div class="schedule">
+
+        <div class="card">
+
+            <div class="icon">
+                ⛪
+            </div>
+
+            <h3>Ceremonia religioasă</h3>
+
+            <div class="time">
+                13:45
+            </div>
+
+            <div class="location">
+
+                Biserica Sf. Ursula (Ursulinelor)<br>
+                Sibiu
+
+            </div>
+
+            <a class="button"
+               href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac"
+               target="_blank">
+
+               Vezi pe Google Maps
+
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">
+                🥂
+            </div>
+
+            <h3>Petrecerea</h3>
+
+            <div class="time">
+
+                16:00
+
+            </div>
+
+            <div class="location">
+
+                Versailles Weddings & Events<br>
+                Sibiu
+
+            </div>
+
+            <a class="button"
+               href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac"
+               target="_blank">
+
+               Vezi pe Google Maps
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="note">
+
+        Vă rugăm cu drag să ajungeți la locația petrecerii
+        începând cu ora <span class="gold"><b>16:00</b></span>,
+        pentru a ne bucura împreună de fiecare moment al acestei zile speciale.
+
+    </div>
+
+</section>
+<!-- RSVP -->
+
+<section class="rsvp">
+
+    <div class="title">
+
+        <h2>Confirmarea prezenței</h2>
+
+        <p>
+            Vă rugăm să confirmați participarea până la
+            <span class="gold"><strong>1 Octombrie 2026</strong></span>.
+        </p>
+
+    </div>
+
+    <div class="contacts">
+
+        <div class="person">
+
+            <h3>Andreea</h3>
+
+            <div class="phone">
+                0749 401 444
+            </div>
+
+        </div>
+
+        <div class="person">
+
+            <h3>Bogdan</h3>
+
+            <div class="phone">
+                0752 634 381
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="info">
+
+        Pentru o organizare cât mai bună, vă rugăm să ne comunicați dacă veți fi alături de noi până la data de <b>1 Octombrie 2026</b>.
 
         <br><br>
 
-        Astăzi, cu inimile pline de recunoștință și iubire,
-        vă invităm să fiți alături de noi în ziua în care
-        vom începe cel mai frumos capitol al vieții noastre.
+        Dacă preferați <span class="gold">meniu vegetarian</span>, vă rugăm să ne anunțați.
 
-    </p>
+        <br><br>
 
-    <div class="divider"></div>
-
-    <div class="scroll">
-
-        ↓
+        În cazul în care veți fi însoțiți de copii, vă rugăm să ne comunicați și numărul acestora, deoarece pentru ei este pregătit un meniu special.
 
     </div>
 
-</div>
-<div class="container">
+</section>
 
-    <h2>
+<!-- INVITAT SPECIAL -->
 
-        Vă asteptăm la petrecere!
+<section class="artist">
 
-    </h2>
+    <div class="title">
+
+        <h2>Invitat Special</h2>
+
+        <p>
+            Muzica va transforma această zi într-o amintire de neuitat.
+        </p>
+
+    </div>
+
+    <div class="artist-name">
+
+        BETO ADAM
+
+    </div>
 
     <p>
 
-        Ne-ar face o deosebită plăcere să împărtășim cu voi
-        emoțiile, bucuria și începutul unei noi aventuri.
-
-        <br><br>
-
-        Prezența voastră va transforma această zi
-        într-o amintire și mai frumoasă.
+        alături de formația sa
 
     </p>
 
-</div>
-<div class="container">
+</section>
 
-    <div class="subtitle">
+<!-- MENIU -->
 
-        Până la marele "DA"
+<section>
 
-    </div>
+    <div class="title">
 
-    <h2 class="section-title">
+        <h2>Meniul Serii</h2>
 
-        Numărătoarea inversă
-
-    </h2>
-
-    <div class="counter">
-
-        <div class="time-box">
-
-            <span id="days">0</span>
-
-            <div class="time-label">
-
-                Zile
-
-            </div>
-
-        </div>
-
-        <div class="time-box">
-
-            <span id="hours">0</span>
-
-            <div class="time-label">
-
-                Ore
-
-            </div>
-
-        </div>
-
-        <div class="time-box">
-
-            <span id="minutes">0</span>
-
-            <div class="time-label">
-
-                Minute
-
-            </div>
-
-        </div>
-
-        <div class="time-box">
-
-            <span id="seconds">0</span>
-
-            <div class="time-label">
-
-                Secunde
-
-            </div>
-
-        </div>
+        <p>
+            Pregătit cu drag pentru dumneavoastră.
+        </p>
 
     </div>
 
-</div>
-Programul zilei
-⛪
-Ceremonia religioasă
-13:45
-Biserica Sf. Ursula (Ursulinelor)
-Sibiu
+    <div class="menu">
 
-<a class="btn"
-href="https://maps.app.goo.gl/HpbPHdZDZt3Yvgf98?g_st=ac"
-target="_blank">
-Google Maps
-🥂
-Petrecerea
-16:00
-Versailles Weddings & Events
-Sibiu
+        <div class="menu-card">
 
-<a class="btn"
-href="https://maps.app.goo.gl/NbdNcMfB191yJSf19?g_st=ac"
-target="_blank">
-Google Maps
-Vă rugăm să ajungeți la locația petrecerii începând cu ora 16:00, pentru a putea începe împreună această seară specială.
-Confirmare participare
-Vă rugăm să ne confirmați prezența până la 1 octombrie 2026.
-Andreea
-0749 401 444
-Bogdan
-0752 634 381
-Andreea & Bogdan
-17 octombrie 2026
-Prezența voastră este cel mai frumos dar pe care îl putem primi.
-Vrem să sărbătorim împreună această zi specială.
+            <h3>Aperitiv</h3>
 
-Vă așteptăm cu drag!
-// ---------------- COUNTDOWN ----------------
+            <ul>
+
+                <li>Salată de vinete cu roșii</li>
+
+                <li>Chifteluțe</li>
+
+                <li>Telemea</li>
+
+                <li>Ruladă de chorizo</li>
+
+                <li>Bruschetă cu cremă de brânză și crevete</li>
+
+                <li>Somon afumat cu cremă de brânză pe pat de castravete</li>
+
+                <li>Pastramă de vită cu măr și hrean</li>
+
+                <li>Cașcaval</li>
+
+                <li>Tartină cu piept de rață și dulceață de ceapă</li>
+
+                <li>Icre</li>
+
+                <li>Tartină cu salam de Sibiu și germeni de praz</li>
+
+                <li>Roșie învelită în mozzarella în crustă de verdețuri</li>
+
+            </ul>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>Felul I</h3>
+
+            <p>
+
+                Medalion Butterfish în crustă de susan negru,
+                servit cu mix de legume și sos.
+
+            </p>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>Felul II</h3>
+
+            <p>
+
+                Ciorbă de rață.
+
+            </p>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>Felul III</h3>
+
+            <p>
+
+                Duo din rasol de porc cu pulpă de pui dezosată,
+                piure de cartofi cu parmezan,
+                ulei de măsline cu verdețuri
+                și reducție din vin roșu.
+
+            </p>
+
+        </div>
+
+        <div class="menu-card">
+
+            <h3>Felul IV</h3>
+
+            <p>
+
+                Sarmale în foi de varză,
+                costiță,
+                mămăligă
+                și smântână.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <h2>Vă așteptăm cu drag!</h2>
+
+    <p>
+
+        Prezența voastră este cel mai frumos dar pe care îl putem primi.
+
+        <br><br>
+
+        Vă mulțumim că veți fi alături de noi într-una dintre cele mai importante zile din viața noastră.
+
+        <br><br>
+
+        Abia așteptăm să râdem, să dansăm și să sărbătorim împreună începutul unei noi povești.
+
+    </p>
+
+    <div class="signature">
+
+        A │ B
+
+    </div>
+
+</section>
+<script>
+
+// =========================
+// COUNTDOWN
+// =========================
+
 const weddingDate = new Date("October 17, 2026 13:45:00").getTime();
+
 function updateCountdown(){
+
 const now = new Date().getTime();
+
 const distance = weddingDate - now;
-if(distance<=0){
-["days","hours","minutes","seconds"].forEach(id=>{ document.getElementById(id).innerHTML="0"; });
-return;
+
+const days = Math.floor(distance / (1000*60*60*24));
+
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+
+document.getElementById("hours").innerHTML = hours;
+
+document.getElementById("minutes").innerHTML = minutes;
+
+document.getElementById("seconds").innerHTML = seconds;
+
+if(distance < 0){
+
+document.getElementById("days").innerHTML="0";
+document.getElementById("hours").innerHTML="0";
+document.getElementById("minutes").innerHTML="0";
+document.getElementById("seconds").innerHTML="0";
+
 }
-document.getElementById("days").innerHTML=Math.floor(distance/(10006060*24));
-document.getElementById("hours").innerHTML=Math.floor((distance%(1000606024))/(100060*60));
-document.getElementById("minutes").innerHTML=Math.floor((distance%(10006060))/(1000*60));
-document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
+
 }
-updateCountdown();
+
 setInterval(updateCountdown,1000);
-// ---------- SCROLL ANIMATION ----------
-const observer=new IntersectionObserver((entries)=>{
+
+updateCountdown();
+
+
+// =========================
+// FADE LA SCROLL
+// =========================
+
+const observer = new IntersectionObserver((entries)=>{
+
 entries.forEach(entry=>{
+
 if(entry.isIntersecting){
+
 entry.target.style.opacity="1";
+
 entry.target.style.transform="translateY(0)";
+
 }
+
 });
+
 },{threshold:.15});
-document.querySelectorAll("section,.card,.contact,footer").forEach(el=>{
-el.style.opacity="0";
-el.style.transform="translateY(40px)";
-el.style.transition=".8s ease";
-observer.observe(el);
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.style.opacity="0";
+
+section.style.transform="translateY(50px)";
+
+section.style.transition="all 1.2s ease";
+
+observer.observe(section);
+
 });
-document.querySelector(".hero").style.opacity="1";
-document.querySelector(".hero").style.transform="none";
+
+
+// =========================
+// HERO APARE IMEDIAT
+// =========================
+
+const hero=document.querySelector(".hero");
+
+hero.style.opacity="1";
+
+hero.style.transform="translateY(0)";
+
+
+// =========================
+// PARALLAX
+// =========================
+
+window.addEventListener("scroll",()=>{
+
+const scroll=window.pageYOffset;
+
+document.querySelector(".hero").style.backgroundPositionY=scroll*0.5+"px";
+
+});
+
+
+// =========================
+// EFECT HOVER PE CARDURI
+// =========================
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.addEventListener("mousemove",(e)=>{
+
+const x=e.offsetX;
+
+const y=e.offsetY;
+
+card.style.background=
+`radial-gradient(circle at ${x}px ${y}px,
+rgba(200,168,107,.15),
+#181818 65%)`;
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.background="#181818";
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
